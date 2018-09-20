@@ -2,3 +2,5 @@ app-cache/
 logs/*
 
 *.pyc
+
+!strafe/app-cache/
