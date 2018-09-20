@@ -1,0 +1,33 @@
+/*
+/r/GlobalOffensive Stylesheet
+Version 1.0
+Created 1 April 2015
+Updated frequently
+
+|-------------------------------------------------------------------------|
+|---- As of December 19, 2017, this stylesheet has grown too large to ----|
+|---- leave unminified. To unminify our stylesheet, consider pasting -----|
+|---- it into a CSS unminifier such as the MrColes CSS unminifier: -------|
+|--------------- https://mrcoles.com/blog/css-unminify/ ------------------|
+|-------------------------------------------------------------------------|
+
+Feel free to use and distribute any or all of this stylesheet
+as desired. Please give credit where credit is due!
+
+Contributors:
+  /u/Jpon9
+  /u/JovialFeline
+  /u/eNzyy (Previous versions only)
+  /u/zebradolphin5 (current version)
+
+Color Scheme (http://i.imgur.com/LZrUrgh.png)
+    Primary Color (Yellowish, used for headers mainly)
+        PC-1    #FCB00C (Lightest)
+        PC-3    #F0A40A
+        PC-5    #E69A0A (Darkest)
+    Secondary Color (Primarily used as backdrop colors)
+        TC-1    #1E2636 (Lightest)
+        TC-3    #101828
+        TC-5    #010713 (Darkest)
+
+*/

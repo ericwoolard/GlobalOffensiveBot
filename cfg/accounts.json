@@ -1,0 +1,14 @@
+{
+    "csgocomnights": {
+        "refresh_token": "",
+        "scope": "",
+        "access_token": "",
+        "expires": 12345
+    },
+    "GlobalOffensiveBot": {
+        "scope": "",
+        "refresh_token": "",
+        "access_token": "",
+        "expires": 12345
+    }
+}

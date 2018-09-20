@@ -1,0 +1,81 @@
+{
+    "use_wiki": false,
+    "dev_mode": false,
+    "stylesheet": {
+        "disable": false,
+        "minify": false,
+        "num_of_headers": 1,
+        "new_header_cycle": {
+            "enabled": true,
+            "interval_mins": 60
+        },
+        "demonyms_enabled": true
+    },
+    "sidebar": {
+        "livestreams": {
+            "max_shown": 8,
+            "games": [
+                "Counter-Strike: Global Offensive"
+            ],
+            "show_thumbnails": true,
+            "spritesheet_name": "stream-images",
+            "services": [
+                "twitch",
+                "hitbox",
+                "mlg",
+                "youtube",
+                "fbwatch"
+            ],
+            "youtube_channels": {
+                "ESL": "",
+                "Faceit": ""
+            },
+            "none_message": "No streams are currently live",
+            "see_all_link": "http:\/\/bit.ly\/1rXZ9v3",
+            "custom_thumbs": {
+                "CSRuHub": "https:\/\/i.imgur.com\/EcUkfVS.png",
+                "csruhub2": "https:\/\/i.imgur.com\/EcUkfVS.png",
+                "esl_RuHub_CSGO": "https:\/\/i.imgur.com\/EcUkfVS.png"
+            }
+        },
+        "teamspeak": {
+            "username": "",
+            "ip": "",
+            "password": ""
+        },
+        "demonym_interval_mins": 30,
+        "update_interval_mins": 2,
+        "community_spotlight_interval_mins": 30,
+        "matchticker": {
+            "max_shown": 8,
+            "none_message": "No matches are currently scheduled"
+        },
+        "calendar": {
+            "id": "",
+            "app_name": "GlobalOffensiveBot",
+            "num_of_events": 8
+        }
+    },
+    "db": {
+        "mongo": {
+            "username": "dota2",
+            "host": "localhost",
+            "password": "hunter4",
+            "port": 1337,
+            "database": ""
+        }
+    },
+    "autoposter": {
+        "check_interval_secs": 5
+    },
+    "subreddit": "GlobalOffensive",
+    "api_key": {
+        "irc_counter": "",
+        "google": "",
+        "steam": "",
+        "gosugamers": "",
+        "twitch": "",
+        "youtube": ""
+    },
+    "primary_bot": "GlobalOffensiveBot"
+}

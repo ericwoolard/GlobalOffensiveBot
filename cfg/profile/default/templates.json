@@ -1,0 +1,14 @@
+{
+    "livestreams": {
+        "header": "[](#Live-Streams)",
+        "see_more": ">>**[See all](__LINK__#button#slim)**",
+        "separator": ">>[](#separator)",
+        "stream": ">>>#[__TITLE__](__URL__#profile-__INDEX__)\n%%IGNORE%%##\n%%IGNORE%%### __VIEWERS__ @ __STREAMER__\n"
+    },
+    "matchticker": {
+        "header": "[](#Match-Ticker)",
+        "see_more": ">>**[See all](__LINK__#button#slim)**",
+        "separator": ">>[](#separator)",
+        "match": ">>>\n[~~__TOURNY__~~\n~~__TIME__~~\n~~__TEAM1__~~\n~~__TEAM2__~~](__URL__#info)\n[ ](#lang-__LANG1__)\n[ ](#lang-__LANG2__)\n"
+    }
+}

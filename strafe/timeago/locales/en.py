@@ -1,0 +1,16 @@
+LOCALE = [
+    ["now", "now"],
+    ["%ss ago", "in %ss"],
+    ["1m ago", "in 1m"],
+    ["%sm ago", "in %sm"],
+    ["1h ago", "in 1h"],
+    ["%sh ago", "in %sh"],
+    ["1d ago", "in 1d"],
+    ["%sd ago", "in %sd"],
+    ["1wk ago", "in 1wk"],
+    ["%swks ago", "in %swks"],
+    ["1 month ago", "in 1 month"],
+    ["%s months ago", "in %s months"],
+    ["1yr ago", "in 1yr"],
+    ["%syrs ago", "in %syrs"],
+]

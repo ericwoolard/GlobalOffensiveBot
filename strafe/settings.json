@@ -1,0 +1,57 @@
+{
+    "widget": {
+        "id": "",
+        "styles": {
+            "backgroundColor": null,
+            "headerColor": null
+        },
+        "name": "Strafe Widget",
+        "images": [
+            {
+                "url": "images/header.png",
+                "name": "header"
+            },
+            {
+                "url": "images/teams-big.png",
+                "name": "teams-big"
+            },
+            {
+                "url": "images/maps.png",
+                "name": "maps"
+            },
+            {
+                "url": "images/square.png",
+                "name": "square"
+            },
+            {
+                "url": "images/strafe.png",
+                "name": "strafe"
+            }
+        ],
+        "height": 500,
+        "kind": "custom",
+        "placeholders": {
+            "live": ">\n* __TEAM1__\n* __TEAM1SCORE__ __TEAM1WINS__\n* __MAP1__ __MAP1TYPE__\n* __TEAM2SCORE__ __TEAM2WINS__\n* __TEAM2__\n* __MATCH1VIEWERS__",
+            "past": "> >\n* __PREVTEAM{0}__\n* __PREVTEAM{0}SCORE__\n* __PREVMATCH{1}DATE__ __PREVMATCH{1}TYPE__\n* __PREVTEAM{2}SCORE__\n* __PREVTEAM{2}__"
+        }
+    },
+    "tournament_name": "FACEIT Major: London 2018",
+    "header": "header.jpg",
+    "strafe": {
+        "min_prize_pool": 250000,
+        "num_past_matches": 8,
+        "api_key": ""
+    },
+    "auto_remove": false,
+    "allow_online": false,
+    "GlobalOffensiveBot": {
+        "user_agent": "",
+        "username": "",
+        "subreddit": "",
+        "password": "",
+        "client_secret": "",
+        "client_id": ""
+    },
+    "use_cache": true,
+    "enabled": true
+}

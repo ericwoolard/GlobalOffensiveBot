@@ -1,0 +1,24 @@
+{
+    "scopes": [
+        "https://www.googleapis.com/auth/calendar.readonly"
+    ], 
+    "invalid": false, 
+    "user_agent": "GlobalOffensiveBot", 
+    "id_token": null, 
+    "token_response": {
+        "access_token": "", 
+        "token_type": "Bearer", 
+        "scope": "https://www.googleapis.com/auth/calendar.readonly", 
+        "expires_in": 3600
+    }, 
+    "access_token": "", 
+    "revoke_uri": "https://accounts.google.com/o/oauth2/revoke", 
+    "client_secret": "", 
+    "_class": "OAuth2Credentials", 
+    "token_expiry": "", 
+    "token_info_uri": "https://www.googleapis.com/oauth2/v3/tokeninfo", 
+    "token_uri": "https://accounts.google.com/o/oauth2/token", 
+    "_module": "oauth2client.client", 
+    "refresh_token": "", 
+    "client_id": ""
+}

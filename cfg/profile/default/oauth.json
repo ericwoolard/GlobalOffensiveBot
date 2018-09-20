@@ -1,0 +1,16 @@
+{
+    "GlobalOffensiveBot": {
+        "client_secret": "",
+        "username": "GlobalOffensiveBot",
+        "client_id": "",
+        "password": "",
+        "user_agent": "r/GlobalOffensive Bot"
+    },
+    "csgocomnights": {
+        "client_secret": "",
+        "username": "csgocomnights",
+        "client_id": "",
+        "password": "",
+        "user_agent": "r/GlobalOffensive Community Night poster"
+    }
+}

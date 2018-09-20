@@ -1,0 +1,73 @@
+[*New? Click here for our wiki!*](https://goo.gl/WGkBsA#heading#intro)
+
+[Subreddit Rules](https://www.reddit.com/r/GlobalOffensive/about/rules/#rules#button)
+[Message Moderators](http://goo.gl/oEG7Pb#mods#button)
+[Official CS:GO Blog](https://goo.gl/PCgn5#button)
+
+> * Our Social Media
+> * [](http://goo.gl/Yrc6kr)
+> * [](http://goo.gl/fwu1eP)
+> * [](http://goo.gl/bHoLLk)
+
+__COMMUNITY_METRICS__
+
+[*FACEIT Major London*](#heading)
+
+[](https://www.faceitmajor.com/)  
+[](https://www.twitch.tv/faceittv#major)
+[](https://discordapp.com/invite/globaloffensive#discord)
+
+__LIVESCORETICKER__
+
+[*Content Filters*](#heading)
+
+ |  | 
+---|---
+[Esports Only](https://goo.gl/kFjG8S#filter#esports) | [No Esports](https://goo.gl/yiUXA8#filter#no-esports)
+[Highlights](https://goo.gl/5UE3M9#filter#highlights) | [No Highlights](https://goo.gl/uTjcpN#filter#no-highlights)
+[Discussions](https://goo.gl/t4ISK6#filter#discussion) | [No Fluff](http://goo.gl/BcsaMq#filter#no-fluff)
+[Unfiltered](http://goo.gl/yRWmZB#filter#unfiltered) | [More Filters...](http://goo.gl/3Zc2H0#filter)
+
+[](#/RES_SR_Config/NightModeCompatible)
+
+__LIVESTREAMS__
+
+__MATCHTICKER__
+
+__UPCOMING_EVENTS__
+
+[*Resources*](#heading)
+
+[Matchmaking: ONLINE](http://steamstat.us#button#mm-up)
+
+[Wiki](/r/GlobalOffensive/wiki/index#wiki#button)
+
+[Community Suggestions](https://www.reddit.com/r/GlobalOffensive/wiki/suggestions-list#suggestions#button)
+
+[Chat (IRC)](/r/GlobalOffensive/wiki/irc#irc#button)
+
+[Chat (Discord)](http://discord.gg/globaloffensive#discord#button)
+
+[VODs](http://bit.ly/1tnDX4K#vods#button)
+
+[Demos](http://bit.ly/1wLGhVx#demos#button)
+
+[*Subreddits*](#heading)
+
+[CSeventVODs](/r/CSeventVODs#vods#button)
+
+[GlobalOffensiveTrade](/r/globaloffensivetrade#trade#button)
+
+[RecruitCS](/r/recruitcs#recruitcs#button)
+
+[CSmapmakers](/r/csmapmakers#csmapmakers#button)
+
+[RandomActsOfCSGO](/r/randomactsofcsgo#gathers#button)
+
+[CSWorkshop](/r/csworkshop#workshop#button)
+
+[LearnCSGO](/r/LearnCSGO#learncsgo#button)
+
+[CounterStrikeBinds](/r/CounterStrikeBinds#csbinds#button)
+
+__NOTICES__
