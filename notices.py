@@ -10,11 +10,11 @@ import config
 import log
 
 frequency = {
-    'once':		0,
-    'daily':	60 * 60 * 24,
-    'weekly':	60 * 60 * 24 * 7,
-    'biweekly':	60 * 60 * 24 * 7 * 2,
-    'monthly':	60 * 60 * 24 * 7 * 4
+    'once':     0,
+    'daily':    60 * 60 * 24,
+    'weekly':   60 * 60 * 24 * 7,
+    'biweekly': 60 * 60 * 24 * 7 * 2,
+    'monthly':  60 * 60 * 24 * 7 * 4
 }
 
 # Used for formatting the date to be used for an post title (4th of February, 2nd of January, etc)
