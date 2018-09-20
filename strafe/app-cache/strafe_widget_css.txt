@@ -1,0 +1,395 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  pointer-events: none;
+}
+
+.md {
+  background: white;
+}
+
+ul:not(:first-of-type) {
+  margin-top: -10px;
+}
+
+blockquote:last-of-type {
+  padding-bottom: 55px;
+}
+
+a[href*="#ticker-header"] {
+  z-index: 9999999;
+  position: fixed;
+  display: inline-block;
+  height: 70px;
+  width: 100%;
+  top: 0;
+  background-image: url(%%header%%);
+  text-decoration: none;
+}
+
+a[href*="#liveviewers"] {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -3px;
+  text-decoration: none;
+  color: #1A1A1B;
+  font-size: 10px;
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+  font-style: italic;
+}
+
+li:nth-child(6) {
+  position: relative;
+  width: 100%;
+  height: 15px;
+  top: -17px;
+}
+
+a[href*="https://www.strafe.com"] {
+  z-index: 9999999;
+  position: fixed;
+  display: inline-block;
+  height: 50px;
+  width: 100%;
+  bottom: 0;
+  background: #101927;
+  text-decoration: none;
+  pointer-events: auto;
+  background-image: url(%%strafe%%);
+  background-size: 35%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+h2 {
+  padding-top: 70px;
+}
+
+h2, h3 {
+  width: auto;
+  text-align: center;
+  font-size: 13px;
+  margin: 10px 0 10px 5px;
+  color: #1A1A1B;
+  opacity: 0.75;
+}
+
+ul {
+  height: 80px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.06);
+}
+
+li {
+  display: inline-block;
+  float: left;
+}
+
+li:nth-child(1), li:nth-child(5) {
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  margin-top: 2px;
+}
+
+li:nth-child(1) {
+  left: 10px;
+}
+
+li:nth-child(5) {
+  right: 10px;
+}
+
+li:nth-child(2) {
+  margin-left: 56px;
+}
+
+li:nth-child(2), li:nth-child(4) {
+  width: 60px;
+  height: 100%;
+}
+
+a[href*="#nolive"] {
+  display: inline-block;
+  text-decoration: none;
+  color: #1A1A1B;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 11px;
+  margin-top: 9px;
+}
+
+a[href*="#score"] {
+  text-decoration: none;
+  color: #1A1A1B;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  font-weight: bold;
+  font-size: 22px;
+  margin-top: 10px;
+}
+
+a[href*="#wins-"] {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  color:red;
+  display: inline-block;
+  width: 26px;
+  height: 8px;
+  content: '';
+  background-image: url(%%squares%%);
+  text-decoration: none;
+  background-repeat: no-repeat;
+}
+
+a[href*="#wins-0"] {
+  background-position: 0 0px;
+}
+
+a[href*="#wins-1"] {
+  background-position: 0 -9px;
+}
+
+a[href*="#wins-2"] {
+  background-position: 0 -18px;
+}
+
+li:nth-child(3), a[href*="#map-"] {
+  pointer-events: auto;
+}
+
+a[href*="#map-"]:hover {
+  background-position: -91px -106px;
+  text-indent: -9999px;
+}
+
+li:nth-child(3) {
+  width: 65px;
+  height: 60px;
+  position: relative;
+}
+
+a[href*="#type"] {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: inline-block;
+  width: 100%;
+  line-height: 16px;
+  height: 15px;
+  background: #D8D8D8;
+  text-decoration: none;
+  color: #1A1A1B;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+/* -- PREVIOUS MATCHES -- */
+blockquote ul {
+  height: 40px;
+  width: 100%;
+  padding-bottom: 0px;
+}
+
+blockquote li:nth-child(3) {
+  height: 100%;
+}
+
+blockquote a[href*="#date"] {
+  display: inline-block;
+  text-decoration: none;
+  color: #1A1A1B;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 13px;
+  margin-top: 6px;
+}
+
+.md blockquote:not(:first-of-type) {
+  margin-top: -10px;
+}
+
+blockquote li:nth-child(1), blockquote li:nth-child(5) {
+  height: 33px;
+  width: 33px;
+  margin-top: 4px;
+}
+
+blockquote li:nth-child(1) {
+  left: 20px;
+}
+
+blockquote li:nth-child(5) {
+  right: 20px;
+}
+
+blockquote a[href*="#team-"] {
+  transform: scale(0.6);
+  margin: -11px 0 0 -11px;
+}
+
+/* ------- MAPS ------- */
+
+a[href*="#map-"] {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 10px;
+  width: 100%;
+  padding: 10px 8px 0 6px;
+  background-image: url(%%map%%);
+  height: 50px;
+  box-sizing: border-box;
+}
+
+a[href*="#map-cache"] {
+  background-position: 0 0;
+}
+
+a[href*="#map-dust2"] {
+  background-position: -91px 0;
+}
+
+a[href*="#map-inferno"] {
+  background-position: -182px 0;
+}
+
+a[href*="#map-mirage"] {
+  background-position: 0 -53px;
+}
+
+a[href*="#map-nuke"] {
+  background-position: -91px -53px;
+}
+
+a[href*="#map-overpass"] {
+  background-position: -182px -53px;
+}
+
+a[href*="#map-train"] {
+  background-position: 0 -106px;
+}
+
+/* ------- TEAMS ------- */
+
+a[href*="#team-"] {
+  display: inline-block;
+  content: '';
+  background-image: url(%%teams-big1%%);
+  height: 55px;
+  width: 55px;
+  transform: scale(0.8);
+}
+
+a[href*="#team-big"] {
+  background-position: 0 0;
+}
+
+a[href*="#team-rogue"] {
+  background-position: -55px 0;
+}
+
+a[href*="#team-renegades"] {
+  background-position: -110px 0;
+}
+
+a[href*="#team-vega"] {
+  background-position: -165px 0;
+}
+
+a[href*="#team-liquid"] {
+  background-position: 0 -55px;
+}
+
+a[href*="#team-g2"] {
+  background-position: -55px -55px;
+}
+
+a[href*="#team-mibr"] {
+  background-position: -110px -55px;
+}
+
+a[href*="#team-natus"] {
+  background-position: -165px -55px;
+}
+
+a[href*="#team-winstrike"] {
+  background-position: 0 -110px;
+}
+
+a[href*="#team-hellraisers"] {
+  background-position: -55px -110px;
+}
+
+a[href*="#team-optic"] {
+  background-position: -110px -110px;
+}
+
+a[href*="#team-astralis"] {
+  background-position: -165px -110px;
+}
+
+a[href*="#team-cloud9"] {
+  background-position: 0 -165px;
+}
+
+a[href*="#team-complexity"] {
+  background-position: -55px -165px;
+}
+
+a[href*="#team-faze"] {
+  background-position: -110px -165px;
+}
+
+a[href*="#team-fnatic"] {
+  background-position: -165px -165px;
+}
+
+a[href*="#team-gambit"] {
+  background-position: 0 -220px;
+}
+
+a[href*="#team-mousesports"] {
+  background-position: -55px -220px;
+}
+
+a[href*="#team-ninjas"] {
+  background-position: -110px -220px;
+}
+
+a[href*="#team-north"] {
+  background-position: -165px -220px;
+}
+
+a[href*="#team-sadsnoo"] {
+  background-position: 0 -385px;
+}
+
+a[href*="#team-soldiers"] {
+  background-position: 0 -275px;
+}
+
+a[href*="#team-spirit"] {
+  background-position: -55px -275px;
+}
+
+a[href*="#team-tyloo"] {
+  background-position: -110px -275px;
+}
+
+a[href*="#team-virtus"] {
+  background-position: -165px -275px;
+}

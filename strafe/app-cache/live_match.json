@@ -1,0 +1,100 @@
+{
+    "game_type": "team",
+    "kind": "Round 5",
+    "stage": {
+        "id": 600695248,
+        "name": "Legends Stage",
+        "tournament": {
+            "id": 393458536,
+            "name": "FACEIT Major: London 2018"
+        }
+    },
+    "start_date": "2018-09-16T16:55:00+00:00",
+    "stream": {
+        "viewers": 321274,
+        "id": "faceittv",
+        "url": "https://twitch.tv/faceittv",
+        "type": "twitch"
+    },
+    "home": {
+        "team": {
+            "id": 823,
+            "name": "Ninjas in Pyjamas",
+            "country": "SE"
+        },
+        "players": [
+            {
+                "id": 1258,
+                "tag": "f0rest",
+                "country": "SE"
+            },
+            {
+                "id": 1265,
+                "tag": "GeT_RiGhT",
+                "country": "SE"
+            },
+            {
+                "id": 6462,
+                "tag": "REZ",
+                "country": "SE"
+            },
+            {
+                "id": 4719,
+                "tag": "dennis",
+                "country": "SE"
+            },
+            {
+                "id": 5049,
+                "tag": "Lekr0",
+                "country": "SE"
+            }
+        ]
+    },
+    "game": 1,
+    "score": {
+        "home": 1,
+        "away": 1
+    },
+    "id": 411407984,
+    "away": {
+        "team": {
+            "id": 446171628,
+            "name": "MiBR",
+            "country": "BR"
+        },
+        "players": [
+            {
+                "id": 1693,
+                "tag": "fer",
+                "country": "BR"
+            },
+            {
+                "id": 4907,
+                "tag": "coldzera",
+                "country": "BR"
+            },
+            {
+                "id": 4021,
+                "tag": "Stewie2k",
+                "country": "US"
+            },
+            {
+                "id": 1692,
+                "tag": "FalleN",
+                "country": "BR"
+            },
+            {
+                "id": 1774,
+                "tag": "tarik",
+                "country": "US"
+            }
+        ]
+    },
+    "report_depth": "normal",
+    "format": {
+        "long": "Best of 3",
+        "short": "Bo3"
+    },
+    "status": "live",
+    "report_time": "near-live"
+}

@@ -1,0 +1,154 @@
+{
+    "game": 1,
+    "score": {
+        "home": 11,
+        "away": 15
+    },
+    "id": 925692188,
+    "players": {
+        "home": [
+            {
+                "id": 4719,
+                "tag": "dennis",
+                "country": "SE"
+            },
+            {
+                "id": 5049,
+                "tag": "Lekr0",
+                "country": "SE"
+            },
+            {
+                "id": 1265,
+                "tag": "GeT_RiGhT",
+                "country": "SE"
+            },
+            {
+                "id": 6462,
+                "tag": "REZ",
+                "country": "SE"
+            },
+            {
+                "id": 1258,
+                "tag": "f0rest",
+                "country": "SE"
+            }
+        ],
+        "away": [
+            {
+                "id": 1774,
+                "tag": "tarik",
+                "country": "US"
+            },
+            {
+                "id": 4907,
+                "tag": "coldzera",
+                "country": "BR"
+            },
+            {
+                "id": 1692,
+                "tag": "FalleN",
+                "country": "BR"
+            },
+            {
+                "id": 4021,
+                "tag": "Stewie2k",
+                "country": "US"
+            },
+            {
+                "id": 1693,
+                "tag": "fer",
+                "country": "BR"
+            }
+        ]
+    },
+    "index": 3,
+    "match": 411407984,
+    "map": {
+        "id": 6,
+        "name": "Train"
+    },
+    "status": "live",
+    "coin": null,
+    "scoreboard": [
+        {
+            "player": 4719,
+            "stats": {
+                "assists": 4,
+                "deaths": 16,
+                "kills": 16
+            }
+        },
+        {
+            "player": 5049,
+            "stats": {
+                "assists": 2,
+                "deaths": 16,
+                "kills": 15
+            }
+        },
+        {
+            "player": 1265,
+            "stats": {
+                "assists": 5,
+                "deaths": 20,
+                "kills": 20
+            }
+        },
+        {
+            "player": 1774,
+            "stats": {
+                "assists": 9,
+                "deaths": 21,
+                "kills": 14
+            }
+        },
+        {
+            "player": 4907,
+            "stats": {
+                "assists": 0,
+                "deaths": 15,
+                "kills": 18
+            }
+        },
+        {
+            "player": 1692,
+            "stats": {
+                "assists": 2,
+                "deaths": 10,
+                "kills": 20
+            }
+        },
+        {
+            "player": 4021,
+            "stats": {
+                "assists": 5,
+                "deaths": 19,
+                "kills": 21
+            }
+        },
+        {
+            "player": 1693,
+            "stats": {
+                "assists": 2,
+                "deaths": 22,
+                "kills": 12
+            }
+        },
+        {
+            "player": 6462,
+            "stats": {
+                "assists": 3,
+                "deaths": 18,
+                "kills": 12
+            }
+        },
+        {
+            "player": 1258,
+            "stats": {
+                "assists": 3,
+                "deaths": 15,
+                "kills": 23
+            }
+        }
+    ]
+}
