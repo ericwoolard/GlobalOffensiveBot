@@ -66,7 +66,7 @@ a[href*="https://www.strafe.com"] {
 }
 
 h2 {
-  padding-top: 70px;
+  padding-top: 60px;
 }
 
 h2, h3 {
@@ -194,17 +194,17 @@ a[href*="#type"] {
 }
 
 /* -- PREVIOUS MATCHES -- */
-blockquote ul {
+blockquote blockquote ul {
   height: 40px;
   width: 100%;
   padding-bottom: 0px;
 }
 
-blockquote li:nth-child(3) {
+blockquote blockquote li:nth-child(3) {
   height: 100%;
 }
 
-blockquote a[href*="#date"] {
+blockquote blockquote a[href*="#date"] {
   display: inline-block;
   text-decoration: none;
   color: #1A1A1B;
@@ -215,25 +215,25 @@ blockquote a[href*="#date"] {
   margin-top: 6px;
 }
 
-.md blockquote:not(:first-of-type) {
+.md blockquote  blockquote:not(:first-of-type) {
   margin-top: -10px;
 }
 
-blockquote li:nth-child(1), blockquote li:nth-child(5) {
+blockquote blockquote li:nth-child(1), blockquote blockquote li:nth-child(5) {
   height: 33px;
   width: 33px;
   margin-top: 4px;
 }
 
-blockquote li:nth-child(1) {
+blockquote blockquote li:nth-child(1) {
   left: 20px;
 }
 
-blockquote li:nth-child(5) {
+blockquote blockquote li:nth-child(5) {
   right: 20px;
 }
 
-blockquote a[href*="#team-"] {
+blockquote blockquote a[href*="#team-"] {
   transform: scale(0.6);
   margin: -11px 0 0 -11px;
 }
@@ -253,6 +253,7 @@ a[href*="#map-"] {
   background-image: url(%%map%%);
   height: 50px;
   box-sizing: border-box;
+  /*word-spacing: 99999px;*/
 }
 
 a[href*="#map-cache"] {
@@ -362,6 +363,10 @@ a[href*="#team-gambit"] {
   background-position: 0 -220px;
 }
 
+a[href*="#team-luminosity"] {
+  background-position: -112px -389px;
+}
+
 a[href*="#team-mousesports"] {
   background-position: -55px -220px;
 }
@@ -372,6 +377,10 @@ a[href*="#team-ninjas"] {
 
 a[href*="#team-north"] {
   background-position: -165px -220px;
+}
+
+a[href*="#team-nrg"] {
+  background-position: -57px -389px;
 }
 
 a[href*="#team-sadsnoo"] {
