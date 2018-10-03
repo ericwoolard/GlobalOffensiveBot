@@ -10,7 +10,6 @@ import Translations
 from file_manager import read, save_json, save
 import timeago
 
-
 logging.basicConfig(format='%(asctime)s %(levelname)-8s %(message)s',
                     filename='{}/logging.log'.format(os.path.dirname(os.path.abspath(sys.argv[0]))),
                     level=logging.INFO,
@@ -49,46 +48,58 @@ def get_live_matches(tournament, params=None):
     try:
         # This response returns general data for the live match,
         # but does not include the scoreboard.
-        live_matches = strafe.get(url=matches_endpoint, params=params, query_type='matches')
+        live_matches = strafe.get(url=matches_endpoint, params=params, query_type='matches', first=False)
         if live_matches:
             # If more than one live match is found, take the first
             # TODO - Allow showing more than one live match
-            strafe.live_match = live_matches[0]  # Save the live match data in an instance variable for easy reference
-            save_json('app-cache/live_match.json', live_matches[0])  # Save a cached copy
+            # Save the live match data in an instance variable for easy reference
+            strafe.live_matches = live_matches
+            save_json('app-cache/live_matches.json', strafe.live_matches)
         else:
             logging.info('No live matches found from strafe.get()')
     except:
         logging.exception('{} - Error in get_live_matches!'.format(datetime.now().strftime('%Y-%m-%d %H:%M:%S')))
 
-    if live_matches:
-        if 'id' in live_matches[0]:
-            # If we found a live match in the previous try/except, request the
-            # detailed match stats such as score, map etc. and store separately.
+    if strafe.live_matches:
+        num_live = len(strafe.live_matches)
+        count = 0
+        live_stats = []
+
+        for match in strafe.live_matches:
+            if count == num_live:
+                break
+            if 'id' in match:
+                # If we found a live match, request the detailed match
+                # stats such as score, map etc. and store separately.
+                try:
+                    live_stats.append(strafe.get_live_stats(strafe.live_matches[count]['id']))
+                except:
+                    logging.exception('{} - Error in get_live_stats!'.format(datetime.now().strftime('%Y-%m-%d %H:%M:%S')))
+                count += 1
+
+        if live_stats:
             try:
-                live_stats = strafe.get_live_stats(live_matches[0]['id'])
-                if live_stats:
-                    if len(live_stats) > 1:
+                for stats in live_stats:
+                    if len(stats) > 1:
                         # If the current live match is a BO2 or greater, live_stats will
                         # return a list of live_stats for each map of the series. This
                         # enumerates the list and grabs the index where 'status' == 'live'
-                        live_index = next((index for (index, d) in enumerate(live_stats) if d['status'] == 'live'), None)
+                        live_index = next((index for (index, d) in enumerate(stats) if d['status'] == 'live'), None)
                         if live_index is not None:
-                            strafe.live_match_stats = live_stats[live_index]  # Save the live stats data in an instance variable for easy reference
-                            save_json('app-cache/live_match_stats.json', live_stats[live_index])  # Save a cached copy
+                            strafe.live_match_stats.append(stats[live_index])  # Save the live stats data in an instance variable for easy reference
                         else:
                             # If Strafe marks the most recent live match as finished before the next
                             # map begins, keep displaying the most recent map stats until it begins.
                             count = 0
-                            for index in live_stats:
+                            for index in stats:
                                 if index['status'] == 'upcoming':
                                     break
                                 count += 1
                             if count > 0:
-                                strafe.live_match_stats = live_stats[count - 1]
-                                save_json('app-cache/live_match_stats.json', live_stats[count - 1])
+                                strafe.live_match_stats.append(stats[count - 1])
                     else:
-                        strafe.live_match_stats = live_stats[0]
-                        save_json('app-cache/live_match_stats.json', live_stats[0])
+                        strafe.live_match_stats.append(stats[0])
+                save_json('app-cache/live_match_stats.json', strafe.live_match_stats)  # Save a cached copy
             except:
                 logging.exception('{} - Error getting live stats!'.format(datetime.now().strftime('%Y-%m-%d %H:%M:%S')))
 
@@ -123,7 +134,7 @@ def get_past_matches(tournament_id, params=None):
 def build_markdown():
     # Build the markdown in stages. Live matches first, then past matches
     markdown_template = ''
-    if strafe.live_match and strafe.live_match_stats:
+    if strafe.live_matches and strafe.live_match_stats:
         try:
             markdown_template = read('template/strafe_widget_md_template.txt')
             markdown_template = build_live_match(markdown_template)
@@ -148,24 +159,29 @@ def build_markdown():
 
 def build_live_match(template):
     live_stats = strafe.live_match_stats
-    live_match = strafe.live_match
     placeholder = r.live_placeholder
-    team1 = team_name_formatter(live_match['home']['team']['name'])
-    team2 = team_name_formatter(live_match['away']['team']['name'])
+    count = 0
+    md = ''
+    for match in strafe.live_matches:
+        team1 = team_name_formatter(match['home']['team']['name'])
+        team2 = team_name_formatter(match['away']['team']['name'])
 
-    # Replace all of our placeholders in the markdown
-    # template with the relevant data for live matches
-    md = (placeholder.replace('__TEAM1__', '[](#team-{})'.format(team1))
-                     .replace('__TEAM1SCORE__', '[{}](#score)'.format(live_stats['score']['home']))
-                     .replace('__TEAM1WINS__', '[](#wins-{})'.format(live_match['score']['home']))
-                     .replace('__MAP1__', '[{0} {1}]({2}#map-{0})'.format(live_stats['map']['name'].lower(),
-                                                                          live_match['format']['short'].lower(),
-                                                                          live_match['stream']['url']))
-                     .replace('__MAP1TYPE__', '[{}](#type)'.format(translator.translate(live_match['kind'])))
-                     .replace('__TEAM2SCORE__', '[{}](#score)'.format(live_stats['score']['away']))
-                     .replace('__TEAM2WINS__', '[](#wins-{})'.format(live_match['score']['away']))
-                     .replace('__TEAM2__', '[](#team-{})'.format(team2))
-                     .replace('__MATCH1VIEWERS__', '[{:,} viewers](#liveviewers)'.format(live_match['stream']['viewers'])))
+        # Replace all of our placeholders in the markdown
+        # template with the relevant data for live matches
+        md += (placeholder.replace('__TEAM1__', '[](#team-{})'.format(team1))
+               .replace('__TEAM1SCORE__', '[{}](#score)'.format(live_stats[count]['score']['home']))
+               .replace('__TEAM1WINS__', '[](#wins-{})'.format(match['score']['home']))
+               .replace('__MAP1__', '[{0} {1}]({2}#map-{0})'.format(live_stats[count]['map']['name'].lower(),
+                                                                    match['format']['short'].lower(),
+                                                                    match['stream']['url']))
+               .replace('__MAP1TYPE__', '[{}](#type)'.format(translator.translate(match['kind'])))
+               .replace('__TEAM2SCORE__', '[{}](#score)'.format(live_stats[count]['score']['away']))
+               .replace('__TEAM2WINS__', '[](#wins-{})'.format(match['score']['away']))
+               .replace('__TEAM2__', '[](#team-{})'.format(team2))
+               .replace('__MATCH1VIEWERS__', '[{:,} viewers](#liveviewers)'.format(match['stream']['viewers'])))
+        count += 1
+        if count < len(strafe.live_matches):
+            md += '\n\n> >&nbsp;\n\n'
     template = template.replace('__LIVEMATCHES__', md)
     return template
 
@@ -199,11 +215,11 @@ def format_past_matches(match, count):
     match_date = match['start_date'].split('+')[0].replace('T', ' ')
 
     md = (placeholders.replace('__PREVTEAM{}__'.format(team_nums[0]), '[](#team-{})'.format(team1))
-                      .replace('__PREVTEAM{}SCORE__'.format(team_nums[0]), '[{}](#score)'.format(match['score']['home']))
-                      .replace('__PREVMATCH{}DATE__'.format(count), '[{}](#date)'.format(timeago.format(match_date, datetime.utcnow())))
-                      .replace('__PREVMATCH{}TYPE__'.format(count), '[{}](#type)'.format(translator.translate(match['kind'])))
-                      .replace('__PREVTEAM{}SCORE__'.format(team_nums[1]), '[{}](#score)'.format(match['score']['away']))
-                      .replace('__PREVTEAM{}__'.format(team_nums[1]), '[](#team-{})'.format(team2)))
+          .replace('__PREVTEAM{}SCORE__'.format(team_nums[0]), '[{}](#score)'.format(match['score']['home']))
+          .replace('__PREVMATCH{}DATE__'.format(count), '[{}](#date)'.format(timeago.format(match_date, datetime.utcnow())))
+          .replace('__PREVMATCH{}TYPE__'.format(count), '[{}](#type)'.format(translator.translate(match['kind'])))
+          .replace('__PREVTEAM{}SCORE__'.format(team_nums[1]), '[{}](#score)'.format(match['score']['away']))
+          .replace('__PREVTEAM{}__'.format(team_nums[1]), '[](#team-{})'.format(team2)))
 
     if count < strafe.num_past_matches:
         md += '\n\n> >&nbsp;\n\n'

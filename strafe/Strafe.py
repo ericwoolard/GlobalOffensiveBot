@@ -40,7 +40,7 @@ class Strafe:
         self.num_past_matches = config['strafe']['num_past_matches']
         self.header = {'Authorization': 'Bearer {}'.format(self._api_key)}
         self._tournament_name = config['tournament_name']
-        self.live_match = []
+        self.live_matches = []
         self.live_match_stats = []
         self.past_matches = []
 
@@ -177,20 +177,23 @@ class Strafe:
             If no tournaments meeting the criteria are found
         """
         curr_time = time.time()
-        if not self.auto_remove and self.tournament_name != '':
+        if self.tournament_name != '':
             for tournament in tournaments:
                 if tournament['name'] == self.tournament_name:
                     return tournament
-            return None
-        else:
+            # If the saved tournament name is no longer in the list, clear
+            # the name from our instance variable so we can grab the next.
+            self.tournament_name = ''
+
+        if self.tournament_name == '':
             count = 0
             for tournament in tournaments:
                 for stage in tournament['stages']:
                     if stage['venue']['location'].lower() == 'online' and not self.allow_online:
                         continue
 
-                    # start_date: adjust for server tz diff from UTC
-                    # end_date: add 24 hours so we get the end rather than start of day
+                    # start_date - adjust for server tz diff from UTC
+                    # end_date - add 24 hours so we get the end rather than start of day
                     start_date = time.mktime(datetime.strptime(stage['start_date'], "%Y-%m-%d").timetuple()) - ((60 * 60) * 6)
                     end_date = time.mktime(datetime.strptime(stage['end_date'], "%Y-%m-%d").timetuple()) + ((60 * 60) * 24)
                     if start_date < curr_time < end_date:
