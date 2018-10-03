@@ -1,0 +1,202 @@
+[
+    {
+        "game": 1,
+        "game_type": "team",
+        "id": 139505284,
+        "kind": "Opening Matches",
+        "score": {
+            "home": 0,
+            "away": 1
+        },
+        "report_depth": "normal",
+        "stage": {
+            "name": "Main Event",
+            "tournament": {
+                "name": "ESL One: New York 2018",
+                "id": 290158820
+            },
+            "id": 712432668
+        },
+        "report_time": "near-live",
+        "format": {
+            "long": "Best of 3",
+            "short": "Bo3"
+        },
+        "stream": {
+            "url": "https://twitch.tv/csruhub2",
+            "viewers": 7548,
+            "type": "twitch",
+            "id": "csruhub2"
+        },
+        "start_date": "2018-09-26T18:50:00+00:00",
+        "home": {
+            "players": [
+                {
+                    "country": "CA",
+                    "tag": "Twistzz",
+                    "id": 6691
+                },
+                {
+                    "country": "US",
+                    "tag": "nitr0",
+                    "id": 1778
+                },
+                {
+                    "country": "CA",
+                    "tag": "Naf",
+                    "id": 1770
+                },
+                {
+                    "country": "US",
+                    "tag": "EliGE",
+                    "id": 2948
+                },
+                {
+                    "country": "BR",
+                    "tag": "TACO",
+                    "id": 5251
+                }
+            ],
+            "team": {
+                "name": "Team Liquid",
+                "country": "US",
+                "id": 3035
+            }
+        },
+        "status": "live",
+        "away": {
+            "players": [
+                {
+                    "country": "CA",
+                    "tag": "daps",
+                    "id": 1768
+                },
+                {
+                    "country": "US",
+                    "tag": "FugLy",
+                    "id": 1769
+                },
+                {
+                    "country": "US",
+                    "tag": "Brehze",
+                    "id": 3321
+                },
+                {
+                    "country": "BG",
+                    "tag": "CeRq",
+                    "id": 60930184
+                },
+                {
+                    "country": "US",
+                    "tag": "Nahte",
+                    "id": 7428
+                }
+            ],
+            "team": {
+                "name": "NRG eSports",
+                "country": "US",
+                "id": 3993
+            }
+        }
+    },
+    {
+        "game": 1,
+        "game_type": "team",
+        "id": 682539196,
+        "kind": "Opening Matches",
+        "score": {
+            "home": 1,
+            "away": 1
+        },
+        "report_depth": "normal",
+        "stage": {
+            "name": "Main Event",
+            "tournament": {
+                "name": "ESL One: New York 2018",
+                "id": 290158820
+            },
+            "id": 712432668
+        },
+        "report_time": "near-live",
+        "format": {
+            "long": "Best of 3",
+            "short": "Bo3"
+        },
+        "stream": {
+            "url": "https://twitch.tv/csruhub",
+            "viewers": 12154,
+            "type": "twitch",
+            "id": "csruhub"
+        },
+        "start_date": "2018-09-26T18:50:00+00:00",
+        "home": {
+            "players": [
+                {
+                    "country": "SK",
+                    "tag": "GuardiaN",
+                    "id": 1272
+                },
+                {
+                    "country": "SE",
+                    "tag": "olofmeister",
+                    "id": 1087
+                },
+                {
+                    "country": "DK",
+                    "tag": "karrigan",
+                    "id": 1904
+                },
+                {
+                    "country": "NO",
+                    "tag": "rain",
+                    "id": 1184
+                },
+                {
+                    "country": "BA",
+                    "tag": "NiKo",
+                    "id": 3009
+                }
+            ],
+            "team": {
+                "name": "FaZe Clan",
+                "country": "EU",
+                "id": 4450
+            }
+        },
+        "status": "live",
+        "away": {
+            "players": [
+                {
+                    "country": "BE",
+                    "tag": "Ex6TenZ",
+                    "id": 989
+                },
+                {
+                    "country": "FR",
+                    "tag": "SmithZz",
+                    "id": 1056
+                },
+                {
+                    "country": "FR",
+                    "tag": "shox",
+                    "id": 1036
+                },
+                {
+                    "country": "FR",
+                    "tag": "kennyS",
+                    "id": 998
+                },
+                {
+                    "country": "FR",
+                    "tag": "bodyy",
+                    "id": 1683
+                }
+            ],
+            "team": {
+                "name": "G2 Esports",
+                "country": "FR",
+                "id": 739
+            }
+        }
+    }
+]

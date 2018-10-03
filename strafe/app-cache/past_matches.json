@@ -1,802 +1,802 @@
 [
     {
-        "game_type": "team",
-        "stage": {
-            "id": 600695248,
-            "name": "Legends Stage",
-            "tournament": {
-                "id": 393458536,
-                "name": "FACEIT Major: London 2018"
-            }
-        },
-        "away": {
-            "team": {
-                "id": 446171628,
-                "name": "MiBR",
-                "country": "BR"
-            },
-            "players": [
-                {
-                    "id": 1693,
-                    "country": "BR",
-                    "tag": "fer"
-                },
-                {
-                    "id": 4907,
-                    "country": "BR",
-                    "tag": "coldzera"
-                },
-                {
-                    "id": 4021,
-                    "country": "US",
-                    "tag": "Stewie2k"
-                },
-                {
-                    "id": 1692,
-                    "country": "BR",
-                    "tag": "FalleN"
-                },
-                {
-                    "id": 1774,
-                    "country": "US",
-                    "tag": "tarik"
-                }
-            ]
-        },
-        "id": 411407984,
-        "report_depth": "normal",
-        "report_time": "near-live",
         "game": 1,
-        "kind": "Round 5",
+        "game_type": "team",
+        "id": 1046392196,
+        "kind": "Opening Matches",
         "score": {
             "home": 1,
             "away": 2
         },
-        "format": {
-            "long": "Best of 3",
-            "short": "Bo3"
-        },
-        "stream": {
-            "url": "https://twitch.tv/faceittv",
-            "id": "faceittv",
-            "viewers": 16349,
-            "type": "twitch"
-        },
-        "start_date": "2018-09-16T16:55:00+00:00",
-        "home": {
-            "team": {
-                "id": 823,
-                "name": "Ninjas in Pyjamas",
-                "country": "SE"
-            },
-            "players": [
-                {
-                    "id": 1258,
-                    "country": "SE",
-                    "tag": "f0rest"
-                },
-                {
-                    "id": 1265,
-                    "country": "SE",
-                    "tag": "GeT_RiGhT"
-                },
-                {
-                    "id": 6462,
-                    "country": "SE",
-                    "tag": "REZ"
-                },
-                {
-                    "id": 4719,
-                    "country": "SE",
-                    "tag": "dennis"
-                },
-                {
-                    "id": 5049,
-                    "country": "SE",
-                    "tag": "Lekr0"
-                }
-            ]
-        },
-        "status": "finished"
-    },
-    {
-        "game_type": "team",
-        "stage": {
-            "id": 600695248,
-            "name": "Legends Stage",
-            "tournament": {
-                "id": 393458536,
-                "name": "FACEIT Major: London 2018"
-            }
-        },
-        "away": {
-            "team": {
-                "id": 4450,
-                "name": "FaZe Clan",
-                "country": "EU"
-            },
-            "players": [
-                {
-                    "id": 1087,
-                    "country": "SE",
-                    "tag": "olofmeister"
-                },
-                {
-                    "id": 1904,
-                    "country": "DK",
-                    "tag": "karrigan"
-                },
-                {
-                    "id": 1184,
-                    "country": "NO",
-                    "tag": "rain"
-                },
-                {
-                    "id": 1272,
-                    "country": "SK",
-                    "tag": "GuardiaN"
-                },
-                {
-                    "id": 3009,
-                    "country": "BA",
-                    "tag": "NiKo"
-                }
-            ]
-        },
-        "id": 569056752,
         "report_depth": "normal",
-        "report_time": "near-live",
-        "game": 1,
-        "kind": "Round 5",
-        "score": {
-            "home": 0,
-            "away": 2
+        "stage": {
+            "name": "Main Event",
+            "tournament": {
+                "name": "ESL One: New York 2018",
+                "id": 290158820
+            },
+            "id": 712432668
         },
+        "report_time": "near-live",
         "format": {
             "long": "Best of 3",
             "short": "Bo3"
         },
         "stream": {
-            "url": "https://twitch.tv/faceittv",
-            "id": "faceittv",
-            "viewers": 16349,
-            "type": "twitch"
+            "url": "https://twitch.tv/csruhub",
+            "viewers": 12154,
+            "type": "twitch",
+            "id": "csruhub"
         },
-        "start_date": "2018-09-16T13:45:00+00:00",
+        "start_date": "2018-09-26T15:00:00+00:00",
         "home": {
-            "team": {
-                "id": 739,
-                "name": "G2 Esports",
-                "country": "FR"
-            },
             "players": [
                 {
-                    "id": 1036,
-                    "country": "FR",
-                    "tag": "shox"
+                    "country": "RU",
+                    "tag": "flamie",
+                    "id": 1729
                 },
                 {
-                    "id": 1683,
-                    "country": "FR",
-                    "tag": "bodyy"
-                },
-                {
-                    "id": 1056,
-                    "country": "FR",
-                    "tag": "SmithZz"
-                },
-                {
-                    "id": 998,
-                    "country": "FR",
-                    "tag": "kennyS"
-                },
-                {
-                    "id": 989,
-                    "country": "BE",
-                    "tag": "Ex6TenZ"
-                }
-            ]
-        },
-        "status": "finished"
-    },
-    {
-        "game_type": "team",
-        "stage": {
-            "id": 600695248,
-            "name": "Legends Stage",
-            "tournament": {
-                "id": 393458536,
-                "name": "FACEIT Major: London 2018"
-            }
-        },
-        "away": {
-            "team": {
-                "id": 784,
-                "name": "HellRaisers",
-                "country": "UA"
-            },
-            "players": [
-                {
-                    "id": 7707,
-                    "country": "TR",
-                    "tag": "woxic"
-                },
-                {
-                    "id": 1137,
                     "country": "UA",
-                    "tag": "bondik"
+                    "tag": "Edward",
+                    "id": 1276
                 },
                 {
-                    "id": 7035,
-                    "country": "JO",
-                    "tag": "ISSAA"
+                    "country": "RU",
+                    "tag": "electronic",
+                    "id": 5547
                 },
                 {
-                    "id": 1103,
                     "country": "UA",
-                    "tag": "ANGE1"
+                    "tag": "s1mple",
+                    "id": 1122
                 },
                 {
-                    "id": 4873,
-                    "country": "HU",
-                    "tag": "DeadFox"
+                    "country": "UA",
+                    "tag": "Zeus",
+                    "id": 1262
                 }
-            ]
-        },
-        "id": 600781756,
-        "report_depth": "normal",
-        "report_time": "near-live",
-        "game": 1,
-        "kind": "Round 5",
-        "score": {
-            "home": 1,
-            "away": 2
-        },
-        "format": {
-            "long": "Best of 3",
-            "short": "Bo3"
-        },
-        "stream": {
-            "url": "https://twitch.tv/faceittv",
-            "id": "faceittv",
-            "viewers": 16349,
-            "type": "twitch"
-        },
-        "start_date": "2018-09-16T10:00:00+00:00",
-        "home": {
+            ],
             "team": {
-                "id": 662,
-                "name": "Fnatic",
-                "country": "SE"
-            },
-            "players": [
-                {
-                    "id": 1068,
-                    "country": "SE",
-                    "tag": "flusha"
-                },
-                {
-                    "id": 1090,
-                    "country": "SE",
-                    "tag": "KRiMZ"
-                },
-                {
-                    "id": 1278,
-                    "country": "SE",
-                    "tag": "Xizt"
-                },
-                {
-                    "id": 5025,
-                    "country": "SE",
-                    "tag": "Draken"
-                },
-                {
-                    "id": 1076,
-                    "country": "SE",
-                    "tag": "jw"
-                }
-            ]
-        },
-        "status": "finished"
-    },
-    {
-        "game_type": "team",
-        "stage": {
-            "id": 600695248,
-            "name": "Legends Stage",
-            "tournament": {
-                "id": 393458536,
-                "name": "FACEIT Major: London 2018"
-            }
-        },
-        "away": {
-            "team": {
-                "id": 446171628,
-                "name": "MiBR",
-                "country": "BR"
-            },
-            "players": [
-                {
-                    "id": 4907,
-                    "country": "BR",
-                    "tag": "coldzera"
-                },
-                {
-                    "id": 1693,
-                    "country": "BR",
-                    "tag": "fer"
-                },
-                {
-                    "id": 1692,
-                    "country": "BR",
-                    "tag": "FalleN"
-                },
-                {
-                    "id": 4021,
-                    "country": "US",
-                    "tag": "Stewie2k"
-                },
-                {
-                    "id": 1774,
-                    "country": "US",
-                    "tag": "tarik"
-                }
-            ]
-        },
-        "id": 288406516,
-        "report_depth": "normal",
-        "report_time": "near-live",
-        "game": 1,
-        "kind": "Round 4",
-        "score": {
-            "home": 1,
-            "away": 0
-        },
-        "format": {
-            "long": "Best of 1",
-            "short": "Bo1"
-        },
-        "stream": {
-            "url": "https://twitch.tv/faceittv",
-            "id": "faceittv",
-            "viewers": 16349,
-            "type": "twitch"
-        },
-        "start_date": "2018-09-15T17:45:00+00:00",
-        "home": {
-            "team": {
-                "id": 3317,
-                "name": "Astralis",
-                "country": "DK"
-            },
-            "players": [
-                {
-                    "id": 1038666096,
-                    "country": "DK",
-                    "tag": "device"
-                },
-                {
-                    "id": 879,
-                    "country": "DK",
-                    "tag": "Xyp9x"
-                },
-                {
-                    "id": 922,
-                    "country": "DK",
-                    "tag": "gla1ve"
-                },
-                {
-                    "id": 5019,
-                    "country": "DK",
-                    "tag": "Magisk"
-                },
-                {
-                    "id": 894,
-                    "country": "DK",
-                    "tag": "dupreeh"
-                }
-            ]
-        },
-        "status": "finished"
-    },
-    {
-        "game_type": "team",
-        "stage": {
-            "id": 600695248,
-            "name": "Legends Stage",
-            "tournament": {
-                "id": 393458536,
-                "name": "FACEIT Major: London 2018"
-            }
-        },
-        "away": {
-            "team": {
-                "id": 772,
-                "name": "Cloud9",
-                "country": "US"
-            },
-            "players": [
-                {
-                    "id": 2947,
-                    "country": "US",
-                    "tag": "autimatic"
-                },
-                {
-                    "id": 1078,
-                    "country": "US",
-                    "tag": "Skadoodle"
-                },
-                {
-                    "id": 1833,
-                    "country": "US",
-                    "tag": "Rush"
-                },
-                {
-                    "id": 7576,
-                    "country": "SE",
-                    "tag": "Golden"
-                },
-                {
-                    "id": 4219,
-                    "country": "SK",
-                    "tag": "styko"
-                }
-            ]
-        },
-        "id": 996351164,
-        "report_depth": "normal",
-        "report_time": "near-live",
-        "game": 1,
-        "kind": "Round 4",
-        "score": {
-            "home": 1,
-            "away": 0
-        },
-        "format": {
-            "long": "Best of 1",
-            "short": "Bo1"
-        },
-        "stream": {
-            "url": "https://twitch.tv/faceittv",
-            "id": "faceittv",
-            "viewers": 16349,
-            "type": "twitch"
-        },
-        "start_date": "2018-09-15T15:40:00+00:00",
-        "home": {
-            "team": {
-                "id": 739,
-                "name": "G2 Esports",
-                "country": "FR"
-            },
-            "players": [
-                {
-                    "id": 989,
-                    "country": "BE",
-                    "tag": "Ex6TenZ"
-                },
-                {
-                    "id": 1683,
-                    "country": "FR",
-                    "tag": "bodyy"
-                },
-                {
-                    "id": 998,
-                    "country": "FR",
-                    "tag": "kennyS"
-                },
-                {
-                    "id": 1036,
-                    "country": "FR",
-                    "tag": "shox"
-                },
-                {
-                    "id": 1056,
-                    "country": "FR",
-                    "tag": "SmithZz"
-                }
-            ]
-        },
-        "status": "finished"
-    },
-    {
-        "game_type": "team",
-        "stage": {
-            "id": 600695248,
-            "name": "Legends Stage",
-            "tournament": {
-                "id": 393458536,
-                "name": "FACEIT Major: London 2018"
-            }
-        },
-        "away": {
-            "team": {
-                "id": 662,
-                "name": "Fnatic",
-                "country": "SE"
-            },
-            "players": [
-                {
-                    "id": 1076,
-                    "country": "SE",
-                    "tag": "jw"
-                },
-                {
-                    "id": 1090,
-                    "country": "SE",
-                    "tag": "KRiMZ"
-                },
-                {
-                    "id": 1068,
-                    "country": "SE",
-                    "tag": "flusha"
-                },
-                {
-                    "id": 5025,
-                    "country": "SE",
-                    "tag": "Draken"
-                },
-                {
-                    "id": 1278,
-                    "country": "SE",
-                    "tag": "Xizt"
-                }
-            ]
-        },
-        "id": 810691224,
-        "report_depth": "normal",
-        "report_time": "near-live",
-        "game": 1,
-        "kind": "Round 4",
-        "score": {
-            "home": 1,
-            "away": 0
-        },
-        "format": {
-            "long": "Best of 1",
-            "short": "Bo1"
-        },
-        "stream": {
-            "url": "https://twitch.tv/faceittv",
-            "id": "faceittv",
-            "viewers": 16349,
-            "type": "twitch"
-        },
-        "start_date": "2018-09-15T14:15:00+00:00",
-        "home": {
-            "team": {
-                "id": 817,
                 "name": "Natus Vincere",
-                "country": "UA"
-            },
-            "players": [
-                {
-                    "id": 1276,
-                    "country": "UA",
-                    "tag": "Edward"
-                },
-                {
-                    "id": 1122,
-                    "country": "UA",
-                    "tag": "s1mple"
-                },
-                {
-                    "id": 1729,
-                    "country": "RU",
-                    "tag": "flamie"
-                },
-                {
-                    "id": 5547,
-                    "country": "RU",
-                    "tag": "electronic"
-                },
-                {
-                    "id": 1262,
-                    "country": "UA",
-                    "tag": "Zeus"
-                }
-            ]
-        },
-        "status": "finished"
-    },
-    {
-        "game_type": "team",
-        "stage": {
-            "id": 600695248,
-            "name": "Legends Stage",
-            "tournament": {
-                "id": 393458536,
-                "name": "FACEIT Major: London 2018"
+                "country": "UA",
+                "id": 817
             }
         },
+        "status": "finished",
         "away": {
-            "team": {
-                "id": 4450,
-                "name": "FaZe Clan",
-                "country": "EU"
-            },
             "players": [
                 {
-                    "id": 1184,
+                    "country": "RU",
+                    "tag": "Dosia",
+                    "id": 1110
+                },
+                {
+                    "country": "KZ",
+                    "tag": "HObbit",
+                    "id": 8065
+                },
+                {
+                    "country": "KZ",
+                    "tag": "mou",
+                    "id": 4043
+                },
+                {
+                    "country": "KZ",
+                    "tag": "AdreN",
+                    "id": 2791
+                },
+                {
+                    "country": "RU",
+                    "tag": "Mir",
+                    "id": 3622
+                }
+            ],
+            "team": {
+                "name": "Gambit Esports",
+                "country": "KZ",
+                "id": 5857
+            }
+        }
+    },
+    {
+        "game": 1,
+        "game_type": "team",
+        "id": 463396024,
+        "kind": "Opening Matches",
+        "score": {
+            "home": 2,
+            "away": 1
+        },
+        "report_depth": "normal",
+        "stage": {
+            "name": "Main Event",
+            "tournament": {
+                "name": "ESL One: New York 2018",
+                "id": 290158820
+            },
+            "id": 712432668
+        },
+        "report_time": "near-live",
+        "format": {
+            "long": "Best of 3",
+            "short": "Bo3"
+        },
+        "stream": {
+            "url": "https://twitch.tv/csruhub2",
+            "viewers": 7548,
+            "type": "twitch",
+            "id": "csruhub2"
+        },
+        "start_date": "2018-09-26T15:00:00+00:00",
+        "home": {
+            "players": [
+                {
+                    "country": "EE",
+                    "tag": "ropz",
+                    "id": 164942272
+                },
+                {
+                    "country": "CZ",
+                    "tag": "oskar",
+                    "id": 4430
+                },
+                {
+                    "country": "PL",
+                    "tag": "Snax",
+                    "id": 969
+                },
+                {
+                    "country": "FI",
+                    "tag": "suNny",
+                    "id": 4215
+                },
+                {
+                    "country": "NL",
+                    "tag": "chrisJ",
+                    "id": 1204
+                }
+            ],
+            "team": {
+                "name": "mousesports",
+                "country": "EU",
+                "id": 800
+            }
+        },
+        "status": "finished",
+        "away": {
+            "players": [
+                {
+                    "country": "BE",
+                    "tag": "ScreaM",
+                    "id": 979
+                },
+                {
+                    "country": "SE",
+                    "tag": "KRiMZ",
+                    "id": 1090
+                },
+                {
+                    "country": "SE",
+                    "tag": "jw",
+                    "id": 1076
+                },
+                {
+                    "country": "SE",
+                    "tag": "Draken",
+                    "id": 5025
+                },
+                {
+                    "country": "SE",
+                    "tag": "Xizt",
+                    "id": 1278
+                }
+            ],
+            "team": {
+                "name": "Fnatic",
+                "country": "SE",
+                "id": 662
+            }
+        }
+    },
+    {
+        "game": 1,
+        "game_type": "team",
+        "id": 996746712,
+        "kind": "Grand Final",
+        "score": {
+            "home": 3,
+            "away": 0
+        },
+        "report_depth": "normal",
+        "stage": {
+            "name": "NA",
+            "tournament": {
+                "name": "ESL One: New York 2018",
+                "id": 290158820
+            },
+            "id": 304823816
+        },
+        "report_time": "near-live",
+        "format": {
+            "long": "Best of 5",
+            "short": "Bo5"
+        },
+        "stream": {
+            "url": "https://twitch.tv/csruhub",
+            "viewers": 12154,
+            "type": "twitch",
+            "id": "csruhub"
+        },
+        "start_date": "2018-06-27T02:30:00+00:00",
+        "home": {
+            "players": [
+                {
+                    "country": "US",
+                    "tag": "FugLy",
+                    "id": 1769
+                },
+                {
+                    "country": "BG",
+                    "tag": "CeRq",
+                    "id": 60930184
+                },
+                {
+                    "country": "CA",
+                    "tag": "daps",
+                    "id": 1768
+                },
+                {
+                    "country": "US",
+                    "tag": "Brehze",
+                    "id": 3321
+                },
+                {
+                    "country": "US",
+                    "tag": "Nahte",
+                    "id": 7428
+                }
+            ],
+            "team": {
+                "name": "NRG eSports",
+                "country": "US",
+                "id": 3993
+            }
+        },
+        "status": "finished",
+        "away": {
+            "players": [
+                {
+                    "country": "US",
+                    "tag": "ShahZaM",
+                    "id": 1771
+                },
+                {
+                    "country": "CA",
+                    "tag": "androidx23",
+                    "id": 7563
+                },
+                {
+                    "country": "US",
+                    "tag": "yay",
+                    "id": 6475
+                },
+                {
+                    "country": "CA",
+                    "tag": "stanislaw",
+                    "id": 3099
+                },
+                {
+                    "country": "GB",
+                    "tag": "Dephh",
+                    "id": 3196
+                }
+            ],
+            "team": {
+                "name": "compLexity Gaming",
+                "country": "US",
+                "id": 4906
+            }
+        }
+    },
+    {
+        "game": 1,
+        "game_type": "team",
+        "id": 518770864,
+        "kind": "LB Final",
+        "score": {
+            "home": 0,
+            "away": 2
+        },
+        "report_depth": "normal",
+        "stage": {
+            "name": "NA",
+            "tournament": {
+                "name": "ESL One: New York 2018",
+                "id": 290158820
+            },
+            "id": 304823816
+        },
+        "report_time": "near-live",
+        "format": {
+            "long": "Best of 3",
+            "short": "Bo3"
+        },
+        "stream": {
+            "url": "https://twitch.tv/csruhub",
+            "viewers": 12154,
+            "type": "twitch",
+            "id": "csruhub"
+        },
+        "start_date": "2018-06-26T23:40:00+00:00",
+        "home": {
+            "players": [
+                {
+                    "country": "AU",
+                    "tag": "AZR",
+                    "id": 1722
+                },
+                {
+                    "country": "AU",
+                    "tag": "USTILO",
+                    "id": 3585
+                },
+                {
+                    "country": "US",
+                    "tag": "Nifty",
+                    "id": 6843
+                },
+                {
+                    "country": "AU",
+                    "tag": "jks",
+                    "id": 1721
+                },
+                {
                     "country": "NO",
-                    "tag": "rain"
-                },
-                {
-                    "id": 1272,
-                    "country": "SK",
-                    "tag": "GuardiaN"
-                },
-                {
-                    "id": 1087,
-                    "country": "SE",
-                    "tag": "olofmeister"
-                },
-                {
-                    "id": 1904,
-                    "country": "DK",
-                    "tag": "karrigan"
-                },
-                {
-                    "id": 3009,
-                    "country": "BA",
-                    "tag": "NiKo"
+                    "tag": "jkaem",
+                    "id": 2451
                 }
-            ]
-        },
-        "id": 901210656,
-        "report_depth": "normal",
-        "report_time": "near-live",
-        "game": 1,
-        "kind": "Round 4",
-        "score": {
-            "home": 0,
-            "away": 1
-        },
-        "format": {
-            "long": "Best of 1",
-            "short": "Bo1"
-        },
-        "stream": {
-            "url": "https://twitch.tv/faceittv",
-            "id": "faceittv",
-            "viewers": 16349,
-            "type": "twitch"
-        },
-        "start_date": "2018-09-15T12:55:00+00:00",
-        "home": {
+            ],
             "team": {
-                "id": 6203,
-                "name": "TyLoo",
-                "country": "CN"
-            },
-            "players": [
-                {
-                    "id": 8567,
-                    "country": "ID",
-                    "tag": "BnTeT"
-                },
-                {
-                    "id": 1686,
-                    "country": "CN",
-                    "tag": "DD"
-                },
-                {
-                    "id": 6204,
-                    "country": "CN",
-                    "tag": "Mo"
-                },
-                {
-                    "id": 1687,
-                    "country": "CN",
-                    "tag": "somebody"
-                },
-                {
-                    "id": 157273608,
-                    "country": "ID",
-                    "tag": "xccurate"
-                }
-            ]
-        },
-        "status": "finished"
-    },
-    {
-        "game_type": "team",
-        "stage": {
-            "id": 600695248,
-            "name": "Legends Stage",
-            "tournament": {
-                "id": 393458536,
-                "name": "FACEIT Major: London 2018"
+                "name": "Renegades",
+                "country": "AU",
+                "id": 1720
             }
         },
+        "status": "finished",
         "away": {
-            "team": {
-                "id": 823,
-                "name": "Ninjas in Pyjamas",
-                "country": "SE"
-            },
             "players": [
                 {
-                    "id": 5049,
-                    "country": "SE",
-                    "tag": "Lekr0"
+                    "country": "US",
+                    "tag": "ShahZaM",
+                    "id": 1771
                 },
                 {
-                    "id": 4719,
-                    "country": "SE",
-                    "tag": "dennis"
+                    "country": "US",
+                    "tag": "yay",
+                    "id": 6475
                 },
                 {
-                    "id": 1265,
-                    "country": "SE",
-                    "tag": "GeT_RiGhT"
+                    "country": "CA",
+                    "tag": "androidx23",
+                    "id": 7563
                 },
                 {
-                    "id": 1258,
-                    "country": "SE",
-                    "tag": "f0rest"
+                    "country": "GB",
+                    "tag": "Dephh",
+                    "id": 3196
                 },
                 {
-                    "id": 6462,
-                    "country": "SE",
-                    "tag": "REZ"
+                    "country": "CA",
+                    "tag": "stanislaw",
+                    "id": 3099
                 }
-            ]
-        },
-        "id": 788051940,
-        "report_depth": "normal",
-        "report_time": "near-live",
+            ],
+            "team": {
+                "name": "compLexity Gaming",
+                "country": "US",
+                "id": 4906
+            }
+        }
+    },
+    {
         "game": 1,
-        "kind": "Round 4",
+        "game_type": "team",
+        "id": 80929180,
+        "kind": "UB Final",
         "score": {
-            "home": 0,
-            "away": 1
+            "home": 1,
+            "away": 2
         },
+        "report_depth": "normal",
+        "stage": {
+            "name": "NA",
+            "tournament": {
+                "name": "ESL One: New York 2018",
+                "id": 290158820
+            },
+            "id": 304823816
+        },
+        "report_time": "near-live",
         "format": {
-            "long": "Best of 1",
-            "short": "Bo1"
+            "long": "Best of 3",
+            "short": "Bo3"
         },
         "stream": {
-            "url": "https://twitch.tv/faceittv",
-            "id": "faceittv",
-            "viewers": 16349,
-            "type": "twitch"
+            "url": "https://twitch.tv/esl_ruhub_csgo",
+            "viewers": 271,
+            "type": "twitch",
+            "id": "esl_ruhub_csgo"
         },
-        "start_date": "2018-09-15T11:35:00+00:00",
+        "start_date": "2018-06-26T19:30:00+00:00",
         "home": {
-            "team": {
-                "id": 3618,
-                "name": "Vega Squadron",
-                "country": "RU"
-            },
             "players": [
                 {
-                    "id": 6494,
-                    "country": "RU",
-                    "tag": "Chopper"
+                    "country": "AU",
+                    "tag": "AZR",
+                    "id": 1722
                 },
                 {
-                    "id": 3623,
-                    "country": "RU",
-                    "tag": "hutji"
+                    "country": "AU",
+                    "tag": "USTILO",
+                    "id": 3585
                 },
                 {
-                    "id": 3619,
-                    "country": "UA",
-                    "tag": "jR"
+                    "country": "AU",
+                    "tag": "jks",
+                    "id": 1721
                 },
                 {
-                    "id": 6489,
-                    "country": "UA",
-                    "tag": "crush"
+                    "country": "NO",
+                    "tag": "jkaem",
+                    "id": 2451
                 },
                 {
-                    "id": 4610,
-                    "country": "RU",
-                    "tag": "tonyblack"
+                    "country": "US",
+                    "tag": "Nifty",
+                    "id": 6843
                 }
-            ]
+            ],
+            "team": {
+                "name": "Renegades",
+                "country": "AU",
+                "id": 1720
+            }
         },
-        "status": "finished"
+        "status": "finished",
+        "away": {
+            "players": [
+                {
+                    "country": "US",
+                    "tag": "Brehze",
+                    "id": 3321
+                },
+                {
+                    "country": "BG",
+                    "tag": "CeRq",
+                    "id": 60930184
+                },
+                {
+                    "country": "CA",
+                    "tag": "daps",
+                    "id": 1768
+                },
+                {
+                    "country": "US",
+                    "tag": "FugLy",
+                    "id": 1769
+                },
+                {
+                    "country": "US",
+                    "tag": "Nahte",
+                    "id": 7428
+                }
+            ],
+            "team": {
+                "name": "NRG eSports",
+                "country": "US",
+                "id": 3993
+            }
+        }
+    },
+    {
+        "game": 1,
+        "game_type": "team",
+        "id": 1009529316,
+        "kind": "LB Round 2",
+        "score": {
+            "home": 2,
+            "away": 1
+        },
+        "report_depth": "normal",
+        "stage": {
+            "name": "NA",
+            "tournament": {
+                "name": "ESL One: New York 2018",
+                "id": 290158820
+            },
+            "id": 304823816
+        },
+        "report_time": "near-live",
+        "format": {
+            "long": "Best of 3",
+            "short": "Bo3"
+        },
+        "stream": {
+            "url": "https://twitch.tv/csruhub2",
+            "viewers": 7548,
+            "type": "twitch",
+            "id": "csruhub2"
+        },
+        "start_date": "2018-06-26T19:00:00+00:00",
+        "home": {
+            "players": [
+                {
+                    "country": "CA",
+                    "tag": "androidx23",
+                    "id": 7563
+                },
+                {
+                    "country": "US",
+                    "tag": "ShahZaM",
+                    "id": 1771
+                },
+                {
+                    "country": "GB",
+                    "tag": "Dephh",
+                    "id": 3196
+                },
+                {
+                    "country": "CA",
+                    "tag": "stanislaw",
+                    "id": 3099
+                },
+                {
+                    "country": "US",
+                    "tag": "yay",
+                    "id": 6475
+                }
+            ],
+            "team": {
+                "name": "compLexity Gaming",
+                "country": "US",
+                "id": 4906
+            }
+        },
+        "status": "finished",
+        "away": {
+            "players": [
+                {
+                    "country": "BR",
+                    "tag": "hen1",
+                    "id": 1694
+                },
+                {
+                    "country": "BR",
+                    "tag": "yeL",
+                    "id": 7646
+                },
+                {
+                    "country": "BR",
+                    "tag": "Steel",
+                    "id": 3352
+                },
+                {
+                    "country": "BR",
+                    "tag": "NEKIZ",
+                    "id": 548067112
+                },
+                {
+                    "country": "BR",
+                    "tag": "LUCAS1",
+                    "id": 1695
+                }
+            ],
+            "team": {
+                "name": "Luminosity Gaming",
+                "country": "BR",
+                "id": 3706
+            }
+        }
+    },
+    {
+        "game": 1,
+        "game_type": "team",
+        "id": 185417760,
+        "kind": "Grand Final",
+        "score": {
+            "home": 2,
+            "away": 3
+        },
+        "report_depth": "normal",
+        "stage": {
+            "name": "EU",
+            "tournament": {
+                "name": "ESL One: New York 2018",
+                "id": 290158820
+            },
+            "id": 844783916
+        },
+        "report_time": "near-live",
+        "format": {
+            "long": "Best of 5",
+            "short": "Bo5"
+        },
+        "stream": {
+            "url": "https://www.facebook.com/ESLOneCSGO/videos/1870673036309223/",
+            "viewers": null,
+            "type": "other",
+            "id": null
+        },
+        "start_date": "2018-06-26T15:45:00+00:00",
+        "home": {
+            "players": [
+                {
+                    "country": "DK",
+                    "tag": "Kjaerbye",
+                    "id": 946
+                },
+                {
+                    "country": "DK",
+                    "tag": "mertz",
+                    "id": 6949
+                },
+                {
+                    "country": "DK",
+                    "tag": "MSL",
+                    "id": 1240
+                },
+                {
+                    "country": "DK",
+                    "tag": "aizy",
+                    "id": 2771
+                },
+                {
+                    "country": "DK",
+                    "tag": "valde",
+                    "id": 6264
+                }
+            ],
+            "team": {
+                "name": "North",
+                "country": "DK",
+                "id": 9191
+            }
+        },
+        "status": "finished",
+        "away": {
+            "players": [
+                {
+                    "country": "KZ",
+                    "tag": "AdreN",
+                    "id": 2791
+                },
+                {
+                    "country": "KZ",
+                    "tag": "mou",
+                    "id": 4043
+                },
+                {
+                    "country": "KZ",
+                    "tag": "HObbit",
+                    "id": 8065
+                },
+                {
+                    "country": "RU",
+                    "tag": "Dosia",
+                    "id": 1110
+                },
+                {
+                    "country": "RU",
+                    "tag": "Mir",
+                    "id": 3622
+                }
+            ],
+            "team": {
+                "name": "Gambit Esports",
+                "country": "KZ",
+                "id": 5857
+            }
+        }
+    },
+    {
+        "game": 1,
+        "game_type": "team",
+        "id": 351728456,
+        "kind": "LB Final",
+        "score": {
+            "home": 2,
+            "away": 1
+        },
+        "report_depth": "normal",
+        "stage": {
+            "name": "EU",
+            "tournament": {
+                "name": "ESL One: New York 2018",
+                "id": 290158820
+            },
+            "id": 844783916
+        },
+        "report_time": "near-live",
+        "format": {
+            "long": "Best of 3",
+            "short": "Bo3"
+        },
+        "stream": {
+            "url": "https://www.facebook.com/ESLOneCSGO/videos/1870673036309223/",
+            "viewers": null,
+            "type": "other",
+            "id": null
+        },
+        "start_date": "2018-06-26T12:00:00+00:00",
+        "home": {
+            "players": [
+                {
+                    "country": "RU",
+                    "tag": "Dosia",
+                    "id": 1110
+                },
+                {
+                    "country": "KZ",
+                    "tag": "HObbit",
+                    "id": 8065
+                },
+                {
+                    "country": "KZ",
+                    "tag": "mou",
+                    "id": 4043
+                },
+                {
+                    "country": "KZ",
+                    "tag": "AdreN",
+                    "id": 2791
+                },
+                {
+                    "country": "RU",
+                    "tag": "Mir",
+                    "id": 3622
+                }
+            ],
+            "team": {
+                "name": "Gambit Esports",
+                "country": "KZ",
+                "id": 5857
+            }
+        },
+        "status": "finished",
+        "away": {
+            "players": [
+                {
+                    "country": "JO",
+                    "tag": "ISSAA",
+                    "id": 7035
+                },
+                {
+                    "country": "UA",
+                    "tag": "ANGE1",
+                    "id": 1103
+                },
+                {
+                    "country": "HU",
+                    "tag": "DeadFox",
+                    "id": 4873
+                },
+                {
+                    "country": "TR",
+                    "tag": "woxic",
+                    "id": 7707
+                },
+                {
+                    "country": "UA",
+                    "tag": "bondik",
+                    "id": 1137
+                }
+            ],
+            "team": {
+                "name": "HellRaisers",
+                "country": "UA",
+                "id": 784
+            }
+        }
     }
 ]

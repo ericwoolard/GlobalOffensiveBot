@@ -5,82 +5,93 @@
 > ##LIVE MATCHES
 
 >
-* [](#team-sadsnoo)
-* [](#score)
-* [No Matches Live!](#nolive)
-* [](#score)
-* [](#team-sadsnoo)
+* [](#team-liquid)
+* [12](#score) [](#wins-0)
+* [dust ii bo3](https://twitch.tv/csruhub2#map-dust ii) [Opener](#type)
+* [8](#score) [](#wins-1)
+* [](#team-nrg)
+* [7,548 viewers](#liveviewers)
+
+> >&nbsp;
+
+>
+* [](#team-faze)
+* [0](#score) [](#wins-1)
+* [cache bo3](https://twitch.tv/csruhub#map-cache) [Opener](#type)
+* [4](#score) [](#wins-1)
+* [](#team-g2)
+* [12,154 viewers](#liveviewers)
 
 > ###PREVIOUS MATCHES
 
 > >
-* [](#team-ninjas)
-* [1](#score)
-* [3d ago](#date) [Round 5](#type)
-* [2](#score)
-* [](#team-mibr)
-
-> >&nbsp;
-
-> >
-* [](#team-g2)
-* [0](#score)
-* [3d ago](#date) [Round 5](#type)
-* [2](#score)
-* [](#team-faze)
-
-> >&nbsp;
-
-> >
-* [](#team-fnatic)
-* [1](#score)
-* [3d ago](#date) [Round 5](#type)
-* [2](#score)
-* [](#team-hellraisers)
-
-> >&nbsp;
-
-> >
-* [](#team-astralis)
-* [1](#score)
-* [4d ago](#date) [Round 4](#type)
-* [0](#score)
-* [](#team-mibr)
-
-> >&nbsp;
-
-> >
-* [](#team-g2)
-* [1](#score)
-* [4d ago](#date) [Round 4](#type)
-* [0](#score)
-* [](#team-cloud9)
-
-> >&nbsp;
-
-> >
 * [](#team-natus)
 * [1](#score)
-* [4d ago](#date) [Round 4](#type)
-* [0](#score)
+* [6h ago](#date) [Opener](#type)
+* [2](#score)
+* [](#team-gambit)
+
+> >&nbsp;
+
+> >
+* [](#team-mousesports)
+* [2](#score)
+* [6h ago](#date) [Opener](#type)
+* [1](#score)
 * [](#team-fnatic)
 
 > >&nbsp;
 
 > >
-* [](#team-tyloo)
+* [](#team-nrg)
+* [3](#score)
+* [3mo ago](#date) [Finals](#type)
 * [0](#score)
-* [4d ago](#date) [Round 4](#type)
-* [1](#score)
-* [](#team-faze)
+* [](#team-complexity)
 
 > >&nbsp;
 
 > >
-* [](#team-vega)
+* [](#team-renegades)
 * [0](#score)
-* [4d ago](#date) [Round 4](#type)
+* [3mo ago](#date) [LB Final](#type)
+* [2](#score)
+* [](#team-complexity)
+
+> >&nbsp;
+
+> >
+* [](#team-renegades)
 * [1](#score)
-* [](#team-ninjas)
+* [3mo ago](#date) [UB Final](#type)
+* [2](#score)
+* [](#team-nrg)
+
+> >&nbsp;
+
+> >
+* [](#team-complexity)
+* [2](#score)
+* [3mo ago](#date) [LB Round 2](#type)
+* [1](#score)
+* [](#team-luminosity)
+
+> >&nbsp;
+
+> >
+* [](#team-north)
+* [2](#score)
+* [3mo ago](#date) [Finals](#type)
+* [3](#score)
+* [](#team-gambit)
+
+> >&nbsp;
+
+> >
+* [](#team-gambit)
+* [2](#score)
+* [3mo ago](#date) [LB Final](#type)
+* [1](#score)
+* [](#team-hellraisers)
 
 > [](https://www.strafe.com)
