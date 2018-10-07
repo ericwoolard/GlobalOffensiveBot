@@ -3,6 +3,7 @@ from datetime import datetime
 import logging
 import os
 import sys
+import time
 # Our imports
 import Reddit
 import Strafe
@@ -28,6 +29,7 @@ def get_tournament():
             if tournament:
                 get_live_matches(tournament)
             else:
+                logging.info('Tournaments were found, but none active. Removing ticker...')
                 """r.delete_widget()"""
         else:
             logging.info('No tournaments found from strafe.get()')
@@ -120,6 +122,20 @@ def get_past_matches(tournament_id, params=None):
         # Since we can only sort by start_date, reverse the resulting list
         # to give us a new list in descending order by start_date
         past_matches = list(reversed(past_matches))[:strafe.num_past_matches]
+
+        if past_matches:
+            # Remove any matches from the list if they
+            # are more than 2 weeks old
+            count = 0
+            new_past_matches = past_matches.copy()
+            for match in past_matches:
+                start_date = time.mktime(datetime.strptime(match['start_date'].split('T')[0], "%Y-%m-%d").timetuple()) - ((60 * 60) * 6)
+                if (time.time() - start_date) > (((60 * 60) * 24) * 14):
+                    del new_past_matches[count]
+                else:
+                    count += 1
+            past_matches = new_past_matches
+
         if past_matches:
             strafe.past_matches = past_matches  # Save the past matches data in an instance variable for easy reference
             save_json('app-cache/past_matches.json', past_matches)
@@ -151,7 +167,7 @@ def build_markdown():
 
     # If the markdown template isn't empty, save a copy
     # to our cache and begin the upload process
-    if markdown_template != '':
+    if markdown_template != '' and strafe.past_matches:
         save('app-cache/finished_markdown.txt', markdown_template)
         r.widget_markdown = markdown_template
         upload_widget()
@@ -228,6 +244,8 @@ def format_past_matches(match, count):
 
 def team_name_formatter(team):
     team = team.lower()
+    if team.startswith('the '):
+        team = team.split(' ')[1]
     if team.startswith('team '):
         team = team.split('team ')[1]
     if '.' in team:
@@ -240,14 +258,12 @@ def upload_widget():
     res = r.upload_widget()
     if res.status_code != 200:
         logging.exception('{} - Widget upload responded with HTTP {}'.format(datetime.now().strftime('%Y-%m-%d %H:%M:%S'), res.status_code))
-        logging.debug(res.text)
+        logging.info(res.text)
 
 
 def start():
     if strafe.enabled:
         get_tournament()
-        # time.sleep(60)
-        # start()
     else:
         """r.delete_widget()"""
         logging.info('Widget currently disabled. Exiting...')
