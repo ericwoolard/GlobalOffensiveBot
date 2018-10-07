@@ -1,9 +1,6 @@
 # System imports
 import requests
 import requests.auth
-import json
-from pprint import pprint
-from datetime import datetime
 # Third party imports
 import praw
 # Our imports
@@ -119,7 +116,7 @@ class Reddit:
         # aws_lease = requests.post(self.widget_images_s3, data=params, headers=self.oauth_headers).json()
         # fields = aws_lease['fields']
         # file = {'file': open('images/header.png', 'rb')}
-
+        
         # response = requests.post('https:{}'.format(aws_lease['action']), data=fields, files=file)
         # print(response)
 
