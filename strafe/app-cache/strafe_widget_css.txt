@@ -24,7 +24,7 @@ a[href*="#ticker-header"] {
   height: 70px;
   width: 100%;
   top: 0;
-  background-image: url(%%header%%);
+  background-image: url(%%header1%%);
   text-decoration: none;
 }
 
@@ -193,6 +193,19 @@ a[href*="#type"] {
   font-weight: bold;
 }
 
+a[href*="#kind"] {
+  display: inline-block;
+  position: absolute;
+  text-decoration: none;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 10px;
+  width: 100%;
+  padding: 2px 0 0;
+}
+
 /* -- PREVIOUS MATCHES -- */
 blockquote blockquote ul {
   height: 40px;
@@ -249,7 +262,7 @@ a[href*="#map-"] {
   font-weight: bold;
   font-size: 10px;
   width: 100%;
-  padding: 10px 8px 0 6px;
+  padding: 15px 0 0;
   background-image: url(%%map%%);
   height: 50px;
   box-sizing: border-box;
@@ -289,116 +302,109 @@ a[href*="#map-train"] {
 a[href*="#team-"] {
   display: inline-block;
   content: '';
-  background-image: url(%%teams-big1%%);
+  background-image: url(%%teams-big%%);
   height: 55px;
   width: 55px;
   transform: scale(0.8);
 }
 
-a[href*="#team-big"] {
-  background-position: 0 0;
-}
-
 a[href*="#team-rogue"] {
-  background-position: -55px 0;
+    background-position: -57px 0!important;
 }
-
 a[href*="#team-renegades"] {
-  background-position: -110px 0;
+    background-position: -114px 0!important;
 }
-
 a[href*="#team-vega"] {
-  background-position: -165px 0;
+    background-position: -171px 0!important;
 }
-
 a[href*="#team-liquid"] {
-  background-position: 0 -55px;
+    background-position: 0 -57px!important;
 }
-
 a[href*="#team-g2"] {
-  background-position: -55px -55px;
+    background-position: -57px -57px!important;
 }
-
 a[href*="#team-mibr"] {
-  background-position: -110px -55px;
+    background-position: -114px -57px!important;
 }
-
 a[href*="#team-natus"] {
-  background-position: -165px -55px;
+    background-position: -171px -57px!important;
 }
-
 a[href*="#team-winstrike"] {
-  background-position: 0 -110px;
+    background-position: 0 -114px!important;
 }
-
 a[href*="#team-hellraisers"] {
-  background-position: -55px -110px;
+    background-position: -57px -114px!important;
 }
-
 a[href*="#team-optic"] {
-  background-position: -110px -110px;
+    background-position: -114px -114px!important;
 }
-
 a[href*="#team-astralis"] {
-  background-position: -165px -110px;
+    background-position: -171px -114px!important;
 }
-
 a[href*="#team-cloud9"] {
-  background-position: 0 -165px;
+    background-position: 0 -171px!important;
 }
-
 a[href*="#team-complexity"] {
-  background-position: -55px -165px;
+    background-position: -57px -171px!important;
 }
-
 a[href*="#team-faze"] {
-  background-position: -110px -165px;
+    background-position: -114px -171px!important;
 }
-
 a[href*="#team-fnatic"] {
-  background-position: -165px -165px;
+    background-position: -171px -171px!important;
 }
-
 a[href*="#team-gambit"] {
-  background-position: 0 -220px;
+    background-position: 0 -227px!important;
 }
-
 a[href*="#team-luminosity"] {
-  background-position: -112px -389px;
+    background-position: -112px -389px!important;
 }
-
 a[href*="#team-mousesports"] {
-  background-position: -55px -220px;
+    background-position: -57px -227px!important;
 }
-
 a[href*="#team-ninjas"] {
-  background-position: -110px -220px;
+    background-position: -114px -227px!important;
 }
-
 a[href*="#team-north"] {
-  background-position: -165px -220px;
+    background-position: -171px -227px!important;
 }
-
 a[href*="#team-nrg"] {
-  background-position: -57px -389px;
+    background-position: -171px -398px!important;
 }
-
 a[href*="#team-sadsnoo"] {
-  background-position: 0 -385px;
+    background-position: -114px -398px!important;
 }
-
 a[href*="#team-soldiers"] {
-  background-position: 0 -275px;
+    background-position: 0 -284px!important;
 }
-
 a[href*="#team-spirit"] {
-  background-position: -55px -275px;
+    background-position: -57px -284px!important;
 }
-
 a[href*="#team-tyloo"] {
-  background-position: -110px -275px;
+    background-position: -114px -284px!important;
+}
+a[href*="#team-virtus"] {
+    background-position: -171px -284px!important;
+}
+a[href*="#team-big"] {
+    background-position: 0 -341px!important;
+}
+a[href*="#team-sprout"] {
+    background-position: -57px -341px!important;
+}
+a[href*="#team-ence"] {
+    background-position: -114px -342px!important;
+}
+a[href*="#team-cyberzen"] {
+    background-position: -171px -341px!important;
+}
+a[href*="#team-fragsters"] {
+    background-position: 0 -399px!important;
+}
+a[href*="#team-imperial"] {
+    background-position: -57px -398px!important;
 }
 
-a[href*="#team-virtus"] {
-  background-position: -165px -275px;
-}
+
+
+
