@@ -186,13 +186,13 @@ def build_live_match(template):
         # template with the relevant data for live matches
         md += (placeholder.replace('__TEAM1__', '[](#team-{})'.format(team1))
                .replace('__TEAM1SCORE__', '[{}](#score)'.format(live_stats[count]['score']['home']))
-               .replace('__TEAM1WINS__', '[](#wins-{})'.format(match['score']['home']))
-               .replace('__MAP1__', '[{0} {1}]({2}#map-{0})'.format(live_stats[count]['map']['name'].lower(),
-                                                                    match['format']['short'].lower(),
-                                                                    match['stream']['url']))
+               .replace('__TEAM1WINS__', '[](#wins-{score[home]})'.format(**match))
+               .replace('__MAP1__', '[{0}](#kind) [{1}]({2}#map-{1})'.format(match['format']['short'].lower(),
+                                                                             live_stats[count]['map']['name'].lower(),
+                                                                             match['stream']['url']))
                .replace('__MAP1TYPE__', '[{}](#type)'.format(translator.translate(match['kind'])))
                .replace('__TEAM2SCORE__', '[{}](#score)'.format(live_stats[count]['score']['away']))
-               .replace('__TEAM2WINS__', '[](#wins-{})'.format(match['score']['away']))
+               .replace('__TEAM2WINS__', '[](#wins-{score[away]})'.format(**match))
                .replace('__TEAM2__', '[](#team-{})'.format(team2))
                .replace('__MATCH1VIEWERS__', '[{:,} viewers](#liveviewers)'.format(match['stream']['viewers'])))
         count += 1
@@ -231,10 +231,10 @@ def format_past_matches(match, count):
     match_date = match['start_date'].split('+')[0].replace('T', ' ')
 
     md = (placeholders.replace('__PREVTEAM{}__'.format(team_nums[0]), '[](#team-{})'.format(team1))
-          .replace('__PREVTEAM{}SCORE__'.format(team_nums[0]), '[{}](#score)'.format(match['score']['home']))
+          .replace('__PREVTEAM{}SCORE__'.format(team_nums[0]), '[{score[home]}](#score)'.format(**match))
           .replace('__PREVMATCH{}DATE__'.format(count), '[{}](#date)'.format(timeago.format(match_date, datetime.utcnow())))
           .replace('__PREVMATCH{}TYPE__'.format(count), '[{}](#type)'.format(translator.translate(match['kind'])))
-          .replace('__PREVTEAM{}SCORE__'.format(team_nums[1]), '[{}](#score)'.format(match['score']['away']))
+          .replace('__PREVTEAM{}SCORE__'.format(team_nums[1]), '[{score[away]}](#score)'.format(**match))
           .replace('__PREVTEAM{}__'.format(team_nums[1]), '[](#team-{})'.format(team2)))
 
     if count < strafe.num_past_matches:
