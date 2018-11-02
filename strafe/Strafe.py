@@ -3,7 +3,7 @@ import requests
 import requests.auth
 import json
 import time
-from datetime import datetime
+from datetime import datetime, timedelta, date
 from pprint import pprint
 # Our imports
 from file_manager import read_json, save_json
@@ -55,7 +55,8 @@ class Strafe:
         save_json('settings.json', config)
 
     def get(self,
-            date_string=None,
+            before=None,
+            after=None,
             url=None,
             params=None,
             header=None,
@@ -68,8 +69,10 @@ class Strafe:
 
         Parameters
         ----------
-        date_string
-            DateTime string formatted to YYYY-MM-DD
+        before : date
+            Date object formatted to YYYY-MM-DD, the date a tournament must start before
+        after : date
+            Date object formatted to YYYY-MM-DD, the date a tournament must end after
         url : string
             URL to send the request
         params : dict
@@ -88,11 +91,13 @@ class Strafe:
         response : list
             JSON formatted list of the response
         """
-        if date_string is None:
+        if before is None or after is None:
             # Strafe API needs date strings formatted as
             # YYYY-MM-DD in order to query by date
-            curr_time = datetime.now().timestamp()
-            date_string = datetime.utcfromtimestamp(curr_time).strftime("%Y-%m-%d")
+            if not before:
+                before = date.today() + timedelta(days=1)  # add 1 extra day to include tournaments that start today
+            if not after:
+                after = date.today()
         if url is None:
             url = self.api_tournaments
         if params is None:
@@ -100,8 +105,8 @@ class Strafe:
             # the initial tournaments request, otherwise, override.
             params = {
                 'game': self.game,
-                'start_before': date_string,
-                'end_after': date_string
+                'start_before': str(before),
+                'end_after': str(after)
             }
         if header is None:
             header = self.header
