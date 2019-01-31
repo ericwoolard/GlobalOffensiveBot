@@ -131,7 +131,7 @@ class Strafe:
 
         if query_type == 'tournament':
             # Sort the tournaments in desc order by prize pool
-            response = [d for d in response if d['prize_pool']['amount'] >= self.min_prize_pool]
+            response = [d for d in response if d['prize_pool'] and d['prize_pool']['amount'] >= self.min_prize_pool]
 
         if first and len(response) > 1:
             return response[0]
