@@ -182,6 +182,9 @@ def build_live_match(template):
         team1 = team_name_formatter(match['home']['team']['name'])
         team2 = team_name_formatter(match['away']['team']['name'])
 
+        if not match['stream']['viewers']:
+            match['stream']['viewers'] = 0
+
         # Replace all of our placeholders in the markdown
         # template with the relevant data for live matches
         md += (placeholder.replace('__TEAM1__', '[](#team-{})'.format(team1))
