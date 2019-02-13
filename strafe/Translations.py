@@ -14,7 +14,7 @@ class Translations(object):
             'Round 3 High': 'Rd. 3 High',
             'Round 4 Low': 'Rd. 4 Low',
             'Round 4 Mid': 'Rd. 4 Mid',
-            'Round 4 High':, 'Rd. 4 High'
+            'Round 4 High': 'Rd. 4 High'
         }
 
     @property
