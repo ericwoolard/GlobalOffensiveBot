@@ -26,16 +26,6 @@ def build():
                 livestreams += twitch.Twitch().get()
             except KeyError as ke:
                 log.log('\t\tFailed to retrieve Twitch streams. \n\t\tKeyError: {}'.format(ke))
-        if 'hitbox' in services:
-            try:
-                livestreams += hitbox.Hitbox().get()
-            except KeyError as ke:
-                log.log('\t\tFailed to retrieve Hitbox streams. \n\t\tKeyError: {}'.format(ke))
-        if 'mlg' in services:
-            try:
-                livestreams += mlg.MLG().get()
-            except KeyError as ke:
-                log.log('\t\tFailed to retrieve MLG streams. \n\t\tKeyError: {}'.format(ke))
         if 'youtube' in services:
             try:
                 livestreams += youtube.youtube_search()
@@ -99,9 +89,9 @@ def build():
     for livestream in livestreams:
         livestreamMd = livestreamMdTemplate
         livestreamMd = (livestreamMd
-            .replace('__TITLE__',	 livestream['title'])
-            .replace('__URL__',		 livestream['url'])
-            .replace('__INDEX__',	 str(i))
+            .replace('__TITLE__',    livestream['title'])
+            .replace('__URL__',      livestream['url'])
+            .replace('__INDEX__',    str(i))
             .replace('__VIEWERS__',	 livestream['viewers'])
             .replace('__STREAMER__', livestream['streamer']))
         livestreamsMd += livestreamMd

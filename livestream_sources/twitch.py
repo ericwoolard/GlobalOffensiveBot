@@ -5,8 +5,10 @@ class Twitch(LivestreamSource):
     def __init__(self):
         self.settings = config.getSettings()
 
-        parameters = []
+        parameters = ''
         request_headers = {}
+        game_id = 0
+        max_shown = str(self.settings['sidebar']['livestreams']['max_shown'] * 2)
 
         if 'api_key' in self.settings and 'twitch' in self.settings['api_key']:
             request_headers = {'Client-ID': self.settings['api_key']['twitch']}
@@ -18,40 +20,32 @@ class Twitch(LivestreamSource):
             if channels != []:
                 parameters.append('channel=' + ','.join(channels))
 
-        if 'games' in self.settings['sidebar']['livestreams']:
-            games = self.convertGames(self.settings['sidebar']['livestreams']['games'])['Twitch']
-            # NOTE: This doesn't work! Twitch API is dumb and won't accept arrays, so this is temporary!
-            parameters += ['game=' + game for game in games]
-            parameters += ['limit=' + str(self.settings['sidebar']['livestreams']['max_shown'] * 2)]
-
-        # Turn parameters list into a stringified URL parameter chain
-        # e.g. &game=CSGO&limit=5&channel=Jpon9,RedditGlobalOffensive,vooCSGO
-        parameters = '?' + '&'.join(parameters) if len(parameters) > 0 else ''
+        if 'game_ids' in self.settings['sidebar']['livestreams']:
+            if 'CSGO' in self.settings['sidebar']['livestreams']['game_ids']:
+                game_id = self.settings['sidebar']['livestreams']['game_ids']['CSGO']
+                # Turn parameters list into a stringified URL parameter chain
+                parameters = '?game_id={}&first={}'.format(game_id, max_shown)
 
         # Variables to be used in the rest of the object, mainly inherited funcs
         self.name = 'Twitch'
-        self.api_url = 'https://api.twitch.tv/kraken/streams/' + parameters
-        self.streams_field = 'streams'
+        self.api_url = 'https://api.twitch.tv/helix/streams/' + parameters
+        self.streams_field = 'data'
         self.request_headers = request_headers
 
     def convertStream(self, stream):
-        # Twitch API sometimes doesn't have the channel status. I dunno why.
-        if 'status' not in stream['channel']:
-            return None
         return {
-            'streamer': stream['channel']['display_name'],
-            'title': self.prepareTitle(stream['channel']['status']),
-            'url': stream['channel']['url'],
-            'viewers_raw': int(stream['viewers']),
-            'viewers': '{:,}'.format(int(stream['viewers'])),
-            'thumbnail': self.checkCustomThumbs(stream),
-            'language': stream['channel']['language']
+            'streamer': stream['user_name'],
+            'title': self.prepareTitle(stream['title']),
+            'url': 'https://twitch.tv/{}'.format(stream['user_name']),
+            'viewers_raw': int(stream['viewer_count']),
+            'viewers': '{:,}'.format(int(stream['viewer_count'])),
+            'thumbnail': self.checkCustomThumbs(stream, stream['user_name']),
+            'language': stream['language']
         }
 
-    def checkCustomThumbs(self, stream):
-        display_name = stream['channel']['display_name']
-        if display_name in self.settings['sidebar']['livestreams']['custom_thumbs']:
-            thumb_link = self.settings['sidebar']['livestreams']['custom_thumbs'][display_name]
+    def checkCustomThumbs(self, stream, user):
+        if user in self.settings['sidebar']['livestreams']['custom_thumbs']:
+            thumb_link = self.settings['sidebar']['livestreams']['custom_thumbs'][user]
             return thumb_link
 
-        return stream['preview']['template'].replace('{width}', '45').replace('{height}', '30')
+        return stream['thumbnail_url'].replace('{width}', '45').replace('{height}', '30')

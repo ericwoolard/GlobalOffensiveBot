@@ -14,9 +14,9 @@
     "sidebar": {
         "livestreams": {
             "max_shown": 8,
-            "games": [
-                "Counter-Strike: Global Offensive"
-            ],
+            "game_ids": {
+                "CSGO": "32399"
+            },
             "show_thumbnails": true,
             "spritesheet_name": "stream-images",
             "services": [

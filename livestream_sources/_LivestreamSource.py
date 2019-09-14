@@ -71,7 +71,7 @@ class LivestreamSource(object):
 
         return ret
 
-    # Make a request to the given URL, return JSON if possible.  False on error.
+    # Make a request to the given URL, return JSON if possible. False on error.
     def makeApiCall(self, endpoint):
         try:
             apiResponse = requests.get(endpoint, timeout=7, headers=self.request_headers)
@@ -113,19 +113,13 @@ class LivestreamSource(object):
         }
 
     # Convert any user-entered string of text into one of the games below.
+    # NOTE: This is no longer used with new Helix Twitch API, use game IDs instead.
     def convertGames(self, games):
         # Regular expression definitions
         csgo = re.compile(r"c(s[: ]{0,2}?g(o|lobal offensive)|ounter[- ]?strike[: ]{0,2}?g(o|lobal offensive))", re.IGNORECASE)
-        lol = re.compile(r"l(eague of legends|ol)", re.IGNORECASE)
-        dota2 = re.compile(r"d(ota|efense ?of ?the ?ancients) ?2?", re.IGNORECASE)
-        halo = re.compile(r"halo", re.IGNORECASE)
-        swar = re.compile(r"s(ummoner'?s ?)?war([: ]{0,2}?(sky ?arena|sa))?", re.IGNORECASE)
 
         result = {
-            'Twitch': [],
-            'Hitbox': [],
-            'Azubu':  [],
-            'MLG':    []
+            'Twitch': []
         }
 
         # Maps the regex for each game to each service's name/ID for that game
@@ -135,31 +129,6 @@ class LivestreamSource(object):
                 result['Hitbox'].append('427')
                 result['Azubu'].append('csgo')
                 result['MLG'].append('13')
-            elif lol.match(game) != None:
-                result['Twitch'].append('League of Legends')
-                result['Hitbox'].append('1')
-                result['Azubu'].append('league-of-legends')
-                result['MLG'].append('15')
-            elif dota2.match(game) != None:
-                result['Twitch'].append('Dota 2')
-                result['Hitbox'].append('2')
-                result['Azubu'].append('dota-2')
-                result['MLG'].append('20')
-            # Lump all the Halo games together -- it's not a perfect system
-            # but it meets all current requirements and will work until a
-            # more permanent system is drawn up
-            elif halo.match(game) != None:
-                result['Twitch'] += [
-                    'Halo: The Master Chief Collection',
-                    'Halo 5: Guardians',
-                    'Halo Wars',
-                    'Halo: Reach',
-                    'Halo 3: ODST'
-                ]
-                result['Azubu'].append('halo')
-                result['MLG'].append('10')
-            elif swar.match(game) != None:
-                result['Twitch'].append('Summoners War: Sky Arena')
             else:
                 log.warning('No predefined game found for "%s", assuming unknown Twitch game.', 2)
                 result['Twitch'].append(game)
