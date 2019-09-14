@@ -53,10 +53,21 @@ mm = {'status': '', 'url': ''}
 strafe_settings = file_manager.readJson('strafe/settings.json')
 if not strafe_settings['enabled']:
     sidebar = sidebar.replace('\n__LIVESCORETICKER__\n', '')
+else:
+    # Wait 10 seconds to make sure the strafe ticker has had
+    # enough time to build the match list so we can grab the
+    # latest version of the markdown.
+    time.sleep(10)
 
 # Get the different components of the sidebar, but only if there is something
 # in the sidebar markdown for them to replace!
+if '__DISCORDCOUNT__' in sidebar and settings['sidebar']['social']['discord_enabled']:
+    discord_count = community_metrics.getDiscordUsersMarkdown()
 if '__COMMUNITY_METRICS__' in sidebar:
+    # if not settings['sidebar']['social']['ts_enabled'] and not settings['sidebar']['social']['irc_enabled']:
+        # communityMetricsMd = ''
+    # else:
+        # 
     communityMetricsMd = community_metrics.buildMarkdown()
 if '__LIVESCORETICKER__' in sidebar:
     strafe_md = file_manager.read('strafe/app-cache/finished_markdown.txt')
