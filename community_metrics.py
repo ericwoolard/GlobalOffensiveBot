@@ -17,16 +17,40 @@ def buildMarkdown():
     startTime = time()
 
     settings = getSettings()
+    markdown = ''
 
     if settings['dev_mode'] == True:
         log.log('\t... done! (using a cached copy)')
         return cache.read('community_metrics.txt')
+    
 
-    teamspeakMd = getTeamspeakUsersMarkdown(settings)
-    ircMd = getIrcUsersMarkdown(settings)
-    disMd = getDiscordUsersMarkdown(settings)
+    if settings['sidebar']['social']['ts_enabled']:
+        teamspeakMd = getTeamspeakUsersMarkdown(settings)
+    else:
+        log.log('\t\REDTeamspeak metrics disabled.')
+        teamspeakMd = None
+    
+    if settings['sidebar']['social']['irc_enabled']:
+        ircMd = getIrcUsersMarkdown(settings)
+    else:
+        log.log('\t\REDIRC metrics disabled.')
+        ircMd = None
 
-    markdown = teamspeakMd + '\n' + ircMd + '\n' + disMd
+    if settings['sidebar']['social']['discord_enabled']:
+        disMd = getDiscordUsersMarkdown(settings)
+    else:
+        log.log('\t\REDDiscord metrics disabled.')
+        disMd = None
+
+
+    if teamspeakMd is not None:
+        markdown += teamspeakMd + '\n'
+    if ircMd is not None:
+        markdown += ircMd + '\n'
+    if disMd is not None:
+        markdown += disMd
+
+    # markdown = teamspeakMd + '\n' + ircMd + '\n' + disMd
     # markdown = teamspeakMd + '\n' + ircMd + '\n' + ' '
     cache.save('community_metrics.txt', markdown)
 
@@ -71,28 +95,29 @@ def getTeamspeakUsersMarkdown(settings):
     return '1. [](http://www.teamspeak.com/invite/%s#ts3) %d users' % \
            (settings['sidebar']['teamspeak']['ip'], numOfUsers)
 
-# Queries IRC user count API for the number of people on our IRC network
+# Queries Vizo's IRC user count API for the number of people on our IRC network
 def getIrcUsersMarkdown(settings):
     log.log('\tGetting number of IRC users...')
     startTime = time()
 
     if 'api_key' not in settings or 'irc_counter' not in settings['api_key']:
         log.error('No IRC counter API key -- cannot build IRC counting metric')
-        return '1. [](http://reddit.com/r/%s/w/irc#irc) N/A'
+        return '1. [](http://reddit.com/r/globaloffensive/w/irc#irc) N/A'
 
     # Get the API response
     try:
-        apiResponseObj = requests.get('http:url/{}'.format(settings['api_key']['irc_counter']))
+        apiResponseObj = requests.get('http://WEBSITE/api/data/apiKey/%s' % \
+            settings['api_key']['irc_counter'])
     except Exception as e:
         log.error('Could not retrieve IRC users.\nError message: %s' % str(e), 2)
-        return '1. [](http://reddit.com/r/%s/w/irc#irc) N/A'
+        return '1. [](http://reddit.com/r/globaloffensive/w/irc#irc) N/A'
 
     # Convert the response from JSON to a usable object
     try:
         apiResponse = apiResponseObj.json()
     except ValueError:
         log.error('Could not convert IRC API JSON response to an object', 2)
-        return '1. [](http://reddit.com/r/%s/w/irc#irc) N/A'
+        return '1. [](http://reddit.com/r/globaloffensive/w/irc#irc) N/A'
 
     elapsedTime = '\BLUE(%s s)' % str(round(time() - startTime, 3))
     log.log('\t\t\GREEN...done! %s' % elapsedTime)
@@ -111,7 +136,7 @@ def getIrcUsersMarkdown(settings):
                (settings['subreddit'], numOfUsers)
 
 
-def getDiscordUsersMarkdown(settings):
+def getDiscordUsersMarkdown(settings = None):
     log.log('\tGetting number of Discord users...')
     startTime = time()
     
@@ -122,8 +147,55 @@ def getDiscordUsersMarkdown(settings):
 
         elapsedTime = '\BLUE(%s s)' % str(round(time() - startTime, 3))
         log.log('\t\t\GREEN...done! %s' % elapsedTime)
-        return '1. [](http://discord.gg/globaloffensive#discord) {} users'.format(str(cacheCount))
+        return '1. [](http://discord.gg/globaloffensive#discord) {} users online'.format(str(cacheCount))
+        # return '{} users online'.format(str(cacheCount))
     except Exception as ex:
         elapsedTime = '\BLUE(%s s)' % str(round(time() - startTime, 3))
         log.error('\t\t{}'.format(ex))
         return '1. [](http://discord.gg/globaloffensive#discord)'
+        # return ''
+
+
+"""
+# This is currently unused. It was written for a test, and I'm leaving it 
+# in case something needs testing again in the future.
+def getDiscordUsersMarkdown2(settings):
+    client = discord.Client()
+
+    async def get_users():
+        log.log('\tGetting number of Discord users...')
+        online = 0
+        idle = 0
+        offline = 0
+
+        await client.wait_until_ready()
+        startTime = time()
+
+        while not client.is_closed:
+            for server in client.servers:
+                for member in server.members:
+                    if str(member.status) == 'online':
+                        online += 1
+                    elif str(member.status) == 'idle':
+                        idle += 1
+                    elif str(member.status) == 'offline':
+                        offline += 1
+                
+                log.log('\t\tOnline: ' + str(online))
+                log.log('\t\tIdle: ' + str(idle))
+                log.log('\t\tOffline: ' + str(offline))
+                
+                elapsedTime = '\BLUE(%s s)' % str(round(time() - startTime, 3))
+                log.log('\t\t...done! %s' % elapsedTime)
+            await client.close()
+
+        return '1. [](http://discord.gg/globaloffensive#discord) %d users ' % \
+               (online + idle), client.close()
+
+    @client.event
+    async def on_ready():
+        print('Logged in as ' + client.user.name)
+        print('Client ID: ' + client.user.id)
+    client.loop.create_task(get_users())
+    client.run('')
+"""
