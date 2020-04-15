@@ -1,6 +1,6 @@
 {
     "livestreams": {
-        "header": "[](#Live-Streams)",
+        "heading": "[*Live Streams*](#heading)",
         "see_more": ">>**[See all](__LINK__#button#slim)**",
         "separator": ">>[](#separator)",
         "stream": ">>>#[__TITLE__](__URL__#profile-__INDEX__)\n%%IGNORE%%##\n%%IGNORE%%### __VIEWERS__ @ __STREAMER__\n"
