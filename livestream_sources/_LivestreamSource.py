@@ -79,12 +79,18 @@ class LivestreamSource(object):
             log.error('API call for Livestream source "%s" failed \n"%s"' \
                 % (self.name, str(e)), 2)
             return False
+
+        if apiResponse.status_code != 200 and apiResponse.status_code > 299:
+            log.error('Request returned {} - {}'.format(apiResponse.status_code, apiResponse.text))
+            return False
+        
         try:
             apiResponse = apiResponse.json()
         except ValueError as e:
             log.error('JSON parsing for %s API failed\n\t"%s"' \
                 % (self.name, str(e)), 2)
             return False
+            
         return apiResponse
 
     # Wrap up using a cached copy of the response, use in case of error
