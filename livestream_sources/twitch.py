@@ -1,17 +1,24 @@
 import config
+import requests
 from ._LivestreamSource import LivestreamSource
 
 class Twitch(LivestreamSource):
     def __init__(self):
         self.settings = config.getSettings()
+        self.oauth_info = config.getOAuthInfo()
+        self.is_token_valid = self.validateToken(self.oauth_info)
+        self.token = self.getOauth()
 
         parameters = ''
         request_headers = {}
         game_id = 0
         max_shown = str(self.settings['sidebar']['livestreams']['max_shown'] * 2)
 
-        if 'api_key' in self.settings and 'twitch' in self.settings['api_key']:
-            request_headers = {'Client-ID': self.settings['api_key']['twitch']}
+        if 'twitch' in self.settings and 'client_id' in self.settings['twitch']:
+            request_headers = {
+                'Authorization': 'Bearer {}'.format(self.token),
+                'Client-ID': self.settings['twitch']['client_id']
+            }
 
         # If the sidebar.livestreams.twitch_include_only field is set in
         # settings, then we only grab those channels from Twitch.
@@ -36,7 +43,7 @@ class Twitch(LivestreamSource):
         return {
             'streamer': stream['user_name'],
             'title': self.prepareTitle(stream['title']),
-            'url': 'https://twitch.tv/{}'.format(stream['user_name']),
+            'url': 'https://twitch.tv/{}'.format(stream['user_name'].replace(' ', '')),
             'viewers_raw': int(stream['viewer_count']),
             'viewers': '{:,}'.format(int(stream['viewer_count'])),
             'thumbnail': self.checkCustomThumbs(stream, stream['user_name']),
@@ -49,3 +56,40 @@ class Twitch(LivestreamSource):
             return thumb_link
 
         return stream['thumbnail_url'].replace('{width}', '45').replace('{height}', '30')
+
+
+    # See if our OAuth token is still valid. If this fails,
+    # our token is likely expired and needs to be renewed.
+    def validateToken(self, oauth_info):
+        access_token = oauth_info['twitch']['access_token']
+        if access_token:
+            val_url = 'https://id.twitch.tv/oauth2/validate'
+            res = requests.get(val_url, headers={'Authorization': 'OAuth {}'.format(access_token)})
+            if res.status_code == 200:
+                return True
+            else:
+                return False
+        else:
+            return False
+
+
+    # Handle the OAuth code flow for Application type authorization.
+    # Store our access token so it may be used until it expires.
+    def getOauth(self):
+        if not self.is_token_valid:
+            request_data = {
+                    'client_id': self.settings['twitch']['client_id'],
+                    'client_secret': self.settings['twitch']['client_secret'],
+                    'grant_type': self.settings['twitch']['grant_type']
+                }
+            token_url = 'https://id.twitch.tv/oauth2/token'
+            res = requests.post(token_url, data=request_data)
+            if res.status_code == 200:
+                res_data = res.json()
+                self.oauth_info['twitch']['access_token'] = res_data['access_token']
+                config.setOAuthInfo(self.oauth_info)
+                return res_data['access_token']
+            else:
+                return None
+        else:
+            return self.oauth_info['twitch']['access_token']

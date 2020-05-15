@@ -38,13 +38,18 @@
                 "esl_RuHub_CSGO": "https:\/\/i.imgur.com\/EcUkfVS.png"
             }
         },
+        "social": {
+            "ts_enabled": false,
+            "irc_enabled": false,
+            "discord_enabled": true
+        },
         "teamspeak": {
             "username": "",
             "ip": "",
             "password": ""
         },
         "demonym_interval_mins": 30,
-        "update_interval_mins": 2,
+        "update_interval_mins": 5,
         "community_spotlight_interval_mins": 30,
         "matchticker": {
             "max_shown": 8,
@@ -74,8 +79,12 @@
         "google": "",
         "steam": "",
         "gosugamers": "",
-        "twitch": "",
         "youtube": ""
+    },
+    "twitch": {
+        "client_id": "",
+        "client_secret": "",
+        "grant_type": "client_credentials"
     },
     "primary_bot": "GlobalOffensiveBot"
 }

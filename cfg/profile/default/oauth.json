@@ -12,5 +12,8 @@
         "client_id": "",
         "password": "",
         "user_agent": "r/GlobalOffensive Community Night poster"
+    },
+    "twitch": {
+        "access_token": ""
     }
 }
