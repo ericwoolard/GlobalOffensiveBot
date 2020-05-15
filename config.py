@@ -112,6 +112,9 @@ def setAccounts(newAccounts):
 def getOAuthInfo():
     return readJson('oauth.json')
 
+def setOAuthInfo(data):
+    saveJson('oauth.json', data)
+
 # Sidebar template
 def getSidebarTemplate():
     settings = getSettings()
